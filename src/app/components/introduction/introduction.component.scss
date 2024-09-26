@@ -78,30 +78,56 @@
     }
    
 }
-.button-position{
+.button-position {
     display: flex;
     flex-direction: row;
+    gap: 48px;
+
+    button {
+        border: 1px solid white;
+        background-color: transparent;
+        border-radius: 50px;
+        color: white;
+        font-family: 'Karla', monospace;
+        font-size: 18px;
+        padding: 15px;
+        height: 48px;
+        position: relative; 
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            position: relative;
+            transform: translateY(0);
+        }
+
+        &:hover span {
+            transform: translateY(-5px);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
+
 .left-seide {
     display: flex;
     position: relative; 
     justify-content: center; 
     align-items: center;
     width: 10%;
-    // height: 10px;
-    // margin-top: 300px;
 
     .line-scroll {
         display: flex;
         justify-content: center;
-        
         align-items: center;
         width: 1px;
         height: 245px;
         background-color: #3dcfb6;
         border-radius: 50px;
         position: relative; 
-        
         z-index: 1; 
     }
 }
@@ -119,7 +145,6 @@
     transform: translateX(-50%);
     z-index: 2;
     margin-top: 250px;
-
   
     .arrow {
       position: absolute;
@@ -128,8 +153,6 @@
       transform: translateX(-50%);
       animation: moveUpDown 1.5s ease-in-out infinite;
     }
-  
-    // Animationen für die Pfeilbewegung
     @keyframes moveUpDown {
       0% {
         top: 30%;
