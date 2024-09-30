@@ -5,10 +5,10 @@
     width: 100%;
     // height: calc(100% - (20px + 30px));
     background-repeat: no-repeat;
-    background: linear-gradient(45deg, #1c1c1c, #08463b); /* Adjusted colors for the dark-to-green effect */
+    background: linear-gradient(45deg, #1c1c1c, #08463b);
     height: 100vh;
     margin: 0;
-    color: #fff; /* Text color for better contrast */
+    color: #fff; 
     background-size: cover;
     background-position: center;
 }
@@ -33,17 +33,17 @@
       text-decoration: none;
       color: #ffffff;
       font-family: 'Karla', sans-serif;
-      transform: rotate(270deg); /* Dreht den Text um 270 Grad (auf X-Achse) */
-      margin-bottom: 90px; /* Abstand zwischen dem Text und den Icons */
+      transform: rotate(270deg);
+      margin-bottom: 90px;
       font-size: 18px;
     }
   
     .socila-Media-container {
       display: flex;
       flex-direction: column;
-      align-items: center; /* Zentriert die Icons und den Text horizontal */
-      justify-content: center; /* Vertikale Zentrierung */
-      gap: 10px; /* Abstand zwischen den Icons */
+      align-items: center;
+      justify-content: center; 
+      gap: 10px;
       
       img {
         width: 32px;
@@ -56,7 +56,7 @@
       height: 186px;
       background-color: #ffffff;
       border-radius: 50px;
-      margin-top: 90px; /* Abstand zwischen den Icons und der Linie */
+      margin-top: 90px;
       z-index: 1;
     }
   }
