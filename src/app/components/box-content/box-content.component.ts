@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-box-content',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './box-content.component.scss'
 })
 export class BoxContentComponent {
+  @Input() title! : string;
+  @Input() header! : string;
+
 
 }
