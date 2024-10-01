@@ -5,12 +5,13 @@ import { PortfolioHeaderComponent } from "./components/portfolio-header/portfoli
 import { IntroductionComponent } from "./components/introduction/introduction.component";
 import { AboutMeComponentComponent } from "./components/about-me-component/about-me-component.component";
 import { BoxContentComponent } from './components/box-content/box-content.component';
+import { SkillsComponentComponent } from './skills-component/skills-component.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent,BoxContentComponent],
+  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent,BoxContentComponent,SkillsComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

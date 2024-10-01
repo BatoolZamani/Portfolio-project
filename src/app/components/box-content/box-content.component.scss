@@ -30,28 +30,7 @@ section{
         padding-right: 32px;
         font-family: 'Karla', sans-serif;
     }
-    .about-me-details-container{
-        display: flex;
-        flex-direction: column;
-        padding: 32px;
-       .about-me-details{
-        display: flex;
-        flex-direction: row;
-        text-align:start;
-        padding-top: 16px;
-        span {
-            display: inline-block;
-            transition: transform 0.3s ease;
-            position: relative;
-            transform: translateY(0);
-        }
-        &:hover span {
-            transform: translateY(-3px);
-            cursor: pointer;
-        }
-       }
-       
-    }
+    
 }
 
 
