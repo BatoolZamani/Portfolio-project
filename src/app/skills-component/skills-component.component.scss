@@ -12,13 +12,61 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
+   
+    .second-title-skills{
+        padding-top: 32px;
+        display: flex;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: 'Fira', sans-serif;
+
+
+        .right-seide .skill-position span {
+            display: inline-block;
+            white-space: pre-line; /* Erlaubt Umbrüche nach Leerzeichen */
+            text-align: center;
+            color: aquamarine;
+           padding-left: 5px;
+           font-size: 24px;
+        }
+       
+    }
+    .description-skills{
+        padding-top: 16px;
+        padding-bottom: 40px;
+    }
     
 }
 
 
 
 .right-seide {
+   
+    display: flex;
     width: 50%;
     padding-top: 242px;
-    background-color: burlywood;
+    padding-left: 32px;
+    padding-right: 32px;
+    color: white;
+    font-weight: 400;
+    gap: 72px;
+    overflow-wrap: normal;
+    flex-wrap: wrap;
+    
+    .skill-position{
+        display: flex;
+        flex-direction: column;
+        
+        
+        span{
+            display: flex;
+            justify-content: center;
+            font-family: 'Fira', sans-serif;
+            font-size: 18px;
+        }
+    }
+    img{
+        width: 64px;
+        height: 64px;
+    }
 }

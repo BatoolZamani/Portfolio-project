@@ -1,9 +1,7 @@
 .main-content{
-    // background-image: url('/assets/img/Background.png');
     display: flex;
     flex-direction: column;
     width: 100%;
-    // height: calc(100% - (20px + 30px));
     background-repeat: no-repeat;
     background: linear-gradient(45deg, #1c1c1c, #08463b);
     height: 100vh;
@@ -77,39 +75,6 @@
         font-size: 128px;
     }
    
-}
-.button-position {
-    display: flex;
-    flex-direction: row;
-    gap: 48px;
-
-    button {
-        border: 1px solid white;
-        background-color: transparent;
-        border-radius: 50px;
-        color: white;
-        font-family: 'Karla', monospace;
-        font-size: 18px;
-        padding: 15px;
-        height: 48px;
-        position: relative; 
-        overflow: hidden;
-
-        span {
-            display: inline-block;
-            transition: transform 0.3s ease;
-            position: relative;
-            transform: translateY(0);
-        }
-
-        &:hover span {
-            transform: translateY(-5px);
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
 }
 
 .left-seide {
