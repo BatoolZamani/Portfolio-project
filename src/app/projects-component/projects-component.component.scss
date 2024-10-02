@@ -96,9 +96,43 @@ section{
            
         }
     }
-    .right-side{
+    .right-side {
         width: 40%;
-        
+        position: relative;
+    
+        .project-screen-container {
+            display: flex;
+            justify-content: center;
+           
+            position: relative;
+            
+            img {
+                width: 60%;
+                height: 50%;
+                padding-left: 100px;
+                position: absolute;
+            }
+    
+           
+            .back-line {
+                z-index: 0;
+                width: 350px;
+                height: 250px;
+                left: -20px;
+                top: 0;
+            }
+    
+           
+            .main-image {
+                z-index: 1;
+                width: 350px;
+                height: 250px;
+                border-radius: 30px;
+                left: 0;
+                top: 0;
+            }
+        }
     }
+
     
 }
