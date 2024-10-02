@@ -1,0 +1,36 @@
+<section>
+    <div class="left-side">
+        <div class="title-portfolio">
+            Portfolio
+        </div>
+        <div class="header-title">
+            Featured Projects
+        </div>
+        <div class="description">
+            Explore a selection of my work here - Interact with<br> projects to see my skills in action.
+        </div>
+        <div class="projects">
+            @for (project of projects; track $index) {
+                <div class="project-container">
+                    <div class="title-container">
+                        <span>{{project.title}}</span>
+                        <div><img src="assets/img/arrow_outward.png" alt=""></div>
+                    </div>
+                    <ul>
+                        <li>
+                            {{project.skills}}
+                            <span > | </span>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+    
+   
+    <div class="right-side">
+        right
+    </div>
+</section>

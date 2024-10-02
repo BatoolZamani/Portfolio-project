@@ -6,12 +6,13 @@ import { IntroductionComponent } from "./components/introduction/introduction.co
 import { AboutMeComponentComponent } from "./components/about-me-component/about-me-component.component";
 import { BoxContentComponent } from './components/box-content/box-content.component';
 import { SkillsComponentComponent } from './skills-component/skills-component.component';
+import { ProjectsComponentComponent } from "./projects-component/projects-component.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent,BoxContentComponent,SkillsComponentComponent],
+  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

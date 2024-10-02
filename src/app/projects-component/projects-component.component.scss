@@ -1,0 +1,104 @@
+section{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+    .left-side{
+        width: 60%;
+        
+        .title-portfolio{
+            font-size:24px ;
+            font-weight: 700;
+            font-family: 'Karla', monospace;
+            color: #3DCFB6;
+        }
+        .header-title{
+            font-size:64px ;
+            font-weight: 700;
+            font-family: 'Fira', sans-serif;
+            color: #3DCFB6;
+            padding-top: 20px;
+        }
+        .description{
+            font-size:18px ;
+            font-weight: 400;
+            font-family: 'Karla', monospace;
+            color: white;
+            padding-top: 41px;
+            border-bottom:1px solid #3DCFB6 ;
+            padding-bottom: 41px;
+        }
+        .projects{
+           
+            .project-container {
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #3DCFB6;
+                justify-content: space-between;
+                padding-left: 32px;
+                padding-right: 32px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            
+               
+                &:hover {
+                    cursor: pointer; 
+                    transition: transform 0.2s ease-in-out;
+                    
+                   
+                    background-color: rgba(61, 207, 182, 0.1); 
+            
+                  
+                    .title-container img {
+                        display: block;
+                    }
+                }
+            
+                .title-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+            
+                    img {
+                        padding-left: 10px;
+                        padding-top: 10px;
+                        display: none; 
+                    }
+                }
+            
+               
+            
+               
+                .divider{
+                    width: 1px;
+                    height: 20px;
+                    background-color: brown;
+                }
+            }
+            .project-container span{
+                display: flex;
+                font-family: "Fira", sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                color: white;
+                align-items: center;
+            }
+            .project-container ul li{
+                display: flex;
+                align-items: center;
+                font-family: 'Karla', monospace;
+                font-size: 18px;
+                font-weight: 400;
+                color: white;
+                list-style-type:none;
+                
+            }
+           
+        }
+    }
+    .right-side{
+        width: 40%;
+        
+    }
+    
+}
