@@ -1,20 +1,40 @@
-section{
-padding-left: 96px;
-padding-right: 96px;
-padding-top: 48px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-.menu-content{
- display: flex;
- align-items: center;
- 
+section {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-a{
+
+.menu-content {
+    display: flex;
+    align-items: center;
+}
+
+a {
     padding-left: 30px;
     font-size: 20px;
     text-decoration: none;
     color: white;
     font-family: 'Fira', monospace;
+    position: relative;
+    transition: color 0.3s ease;
 }
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px; 
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px; 
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+a:hover::after {
+    background-color: #3dcfb6; 
 }
