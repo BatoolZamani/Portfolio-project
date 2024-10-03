@@ -13,4 +13,5 @@ export class ProjectsComponentComponent {
     { title: 'El Polo Loco', skills: ['HTML','CSS','JavaScript'] },
     { title: 'Da Bubble', skills: ['Angular','Firebase','TypeScript'] }
   ];
+  
 }

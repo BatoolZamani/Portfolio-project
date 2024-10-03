@@ -1,0 +1,31 @@
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 10px 0;
+    font-family: 'Karla', monospace;
+    transform: skewY(-3deg); /* Skew diagonally */
+    -webkit-transform-origin-x: -1100px;
+  }
+  
+  .marquee {
+    display: flex;
+    animation: marquee-animation 20s linear infinite;
+    width: max-content; /* Ensure the marquee can fit both sets of content */
+  }
+  
+  .marquee span {
+    white-space: nowrap;
+    font-size: 1.9rem;
+    margin-right: 100px;
+    color: #3dcfb6;
+  }
+  
+  @keyframes marquee-animation {
+    from {
+      transform: translateX(0); /* Start at the beginning */
+    }
+    to {
+      transform: translateX(-50%); /* Move the text left by 50% of the total width */
+    }
+  }

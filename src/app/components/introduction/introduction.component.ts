@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioHeaderComponent } from "../portfolio-header/portfolio-header.component";
 
+
 @Component({
   selector: 'app-introduction',
   standalone: true,
