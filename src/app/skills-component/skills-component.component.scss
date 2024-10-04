@@ -63,10 +63,16 @@ section {
             justify-content: center;
             font-family: 'Fira', sans-serif;
             font-size: 18px;
+            margin-top: 10px;
         }
     }
     img{
         width: 64px;
         height: 64px;
+    }
+    img:hover{
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        transform: scale(1.10); 
     }
 }
