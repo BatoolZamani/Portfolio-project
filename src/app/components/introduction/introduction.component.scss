@@ -1,54 +1,84 @@
-.main-content{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-repeat: no-repeat;
-    background: linear-gradient(45deg, #1c1c1c, #08463b);
-    height: 100vh;
-    margin: 0;
-    color: #fff; 
-    background-size: cover;
-    background-position: center;
-}
-.content{
-    
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-repeat: no-repeat;
+  background: linear-gradient(45deg, #1c1c1c, #08463b);
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+
+  .content {
     width: 100%;
     display: flex;
     flex-direction: row;
     padding-top: 118px;
-    
-}
-.right-seide {
+  }
+
+  .right-seide {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 10%;
     height: 100vh;
-    margin-top: 200;
-  
-    a {
-      text-decoration: none;
-      color: #ffffff;
-      font-family: 'Karla', sans-serif;
-      transform: rotate(270deg);
-      margin-bottom: 90px;
-      font-size: 18px;
-    }
-  
+    margin-top: 0;
+
     .socila-Media-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; 
-      gap: 5px;
-      
-      a img {
-        width: 32px;
-        height: 32px;
+      .socila-Media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        a {
+          position: relative;
+
+          img {
+            width: 32px;
+            height: 32px;
+
+            // Change the image color to white on hover
+            &:hover {
+              filter: brightness(0) invert(1);
+            }
+          }
+
+          // Show the point only when hovering over the SVG images
+          &:hover::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: #ffffff;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      // Email link styles
+      a span {
+        display: inline-block;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'Karla', sans-serif;
+        transform: rotate(270deg);
+        margin-bottom: 90px;
+        font-size: 18px;
+
+        // No point on hover for the email link
+        &:hover {
+          content: none;
+        }
       }
     }
-  
+
     .line-right {
       width: 1px;
       height: 186px;
@@ -58,75 +88,77 @@
       z-index: 1;
     }
   }
-.middle{
+
+  .middle {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
-    h3{
-        font-family: 'Fira', monospace;
-        font-weight:400;
-        font-size: 40px;
-    }
-    
-    h1{
-        font-family: 'Karla', monospace;
-        font-weight: 700;
-        font-size: 128px;
-    }
-   
-}
+  }
 
-.left-seide {
+  h3 {
+    font-family: 'Fira', monospace;
+    font-weight: 400;
+    font-size: 40px;
+  }
+
+  h1 {
+    font-family: 'Karla', monospace;
+    font-weight: 700;
+    font-size: 128px;
+  }
+
+  .left-seide {
     display: flex;
-    position: relative; 
-    justify-content: center; 
+    position: relative;
+    justify-content: center;
     align-items: center;
     width: 10%;
+  }
 
-    .line-scroll {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1px;
-        height: 245px;
-        background-color: #3dcfb6;
-        border-radius: 50px;
-        position: relative; 
-        z-index: 1; 
-    }
-}
+  .line-scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1px;
+    height: 245px;
+    background-color: #3dcfb6;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+  }
 
-.arrow-container {
+  .arrow-container {
     position: absolute;
     width: 30px;
     height: 48px;
     overflow: hidden;
     border: 1px solid #3dcfb6;
     border-radius: 50px;
-    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
     margin-top: 250px;
-  
+
     .arrow {
       position: absolute;
-      top: 50;
+      top: 50%;
       left: 50%;
       transform: translateX(-50%);
       animation: moveUpDown 1.5s ease-in-out infinite;
     }
-    @keyframes moveUpDown {
-      0% {
-        top: 30%;
-      }
-      50% {
-        top: 50%;
-      }
-      100% {
-        top: 30%;
-      }
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      top: 30%;
+    }
+    50% {
+      top: 50%;
+    }
+    100% {
+      top: 30%;
     }
   }
+}
