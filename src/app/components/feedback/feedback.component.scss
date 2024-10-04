@@ -1,3 +1,7 @@
+// *{
+//     border: 1px solid red;
+// }
+
 .feedback-slider {
     display: flex;
     flex-direction: column;
@@ -16,13 +20,13 @@
   
     .slider-container {
       position: relative;
-      width: 70%;
+      width: 100%;
       overflow: hidden;
   
       .slider {
         display: flex;
         transition: transform 0.1s ease-in-out;
-        width: 100%;
+        width: 70%;
   
         .slide {
           min-width: 50%;
@@ -35,7 +39,7 @@
           text-align: left;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: end;
   
           &.active {
             opacity: 1;
@@ -87,24 +91,19 @@
       transition: transform 0.2s ease;
       margin-top: -15px;
       
-      &.left-arrow {
-        order: -1;
-      }
-      
-      &.right-arrow {
-        order: 1;
-      }
-  
+     
       &:hover {
         color: #fff;
       }
   
       &.left-arrow:hover {
         transform: translateX(-5px);
+        cursor: pointer;
       }
   
       &.right-arrow:hover {
         transform: translateX(5px);
+        cursor: pointer;
       }
     }
   }

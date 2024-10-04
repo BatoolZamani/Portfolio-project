@@ -30,7 +30,6 @@
         
       <button class="arrow left-arrow" (click)="prevSlide()"><img src="assets/img/Arrow - back.svg" alt=""></button>
      
-     
       @for (feedback of feedbacks; track $index) {
         <span class="dot" [class.active]="currentSlide === $index" (click)="goToSlide($index)"></span>
       }
