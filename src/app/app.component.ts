@@ -8,12 +8,14 @@ import { BoxContentComponent } from './components/box-content/box-content.compon
 import { SkillsComponentComponent } from './skills-component/skills-component.component';
 import { ProjectsComponentComponent } from "./projects-component/projects-component.component";
 import { MarqueeComponent } from './components/marquee/marquee.component';
+import { FeedbackSliderComponent } from './components/feedback/feedback.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent],
+  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent,FeedbackSliderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

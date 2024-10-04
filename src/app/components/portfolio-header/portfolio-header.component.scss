@@ -20,6 +20,7 @@ a {
     font-family: 'Fira', monospace;
     position: relative;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 a::after {

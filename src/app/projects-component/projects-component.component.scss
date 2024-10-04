@@ -4,7 +4,7 @@ section{
     padding-left: 5%;
     padding-right: 5%;
     .left-side{
-        width: 60%;
+        width: 100%;
         
         .title-portfolio{
             font-size:24px ;
@@ -20,6 +20,7 @@ section{
             padding-top: 20px;
         }
         .description{
+            width: 64.5%;
             font-size:18px ;
             font-weight: 400;
             font-family: 'Karla', monospace;
@@ -39,7 +40,8 @@ section{
                 padding-right: 32px;
                 padding-top: 30px;
                 padding-bottom: 30px;
-            
+                position: relative;
+                width: 60%;
                
                 &:hover {
                     cursor: pointer; 
@@ -50,6 +52,10 @@ section{
             
                   
                     .title-container img {
+                        display: block;
+                    }
+
+                    #join-project{
                         display: block;
                     }
                 }
@@ -66,14 +72,54 @@ section{
                     }
                 }
             
-               
-            
-               
                 .divider{
                     width: 1px;
                     height: 20px;
                     background-color: brown;
                 }
+                
+                .left{
+                    flex-direction: column;
+                }
+
+                .right-side {
+                    flex-direction: column;
+                
+                    .project-screen-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        flex-direction: column;
+                
+                        img {
+                            width: 40%;
+                            height: auto;
+                        }
+                
+                      
+                        .back-line {
+                            z-index: 0;
+                            width: 18vw;
+                            height:auto;
+                            position: absolute;
+                            right: 130px; 
+                           
+                        }
+                
+                      
+                        .main-image {
+                            z-index: 1;
+                            width: 20vw;
+                            height: auto;
+                            border-radius: 30px;
+                            position: relative;
+                            top: 0;
+                            left: 20;
+                        }
+                    }
+                }
+
             }
             .project-container span{
                 display: flex;
@@ -96,44 +142,7 @@ section{
            
         }
     }
-    .right-side {
-        width: 40%;
-        position: relative;
-    
-        .project-screen-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            flex-direction: column;
-    
-            img {
-                width: 40%;
-                height: auto;
-            }
-    
-          
-            .back-line {
-                z-index: 0;
-                width: 18vw;
-                height:auto;
-                position: absolute;
-                right: 130px; 
-               
-            }
-    
-          
-            .main-image {
-                z-index: 1;
-                width: 20vw;
-                height: auto;
-                border-radius: 30px;
-                position: relative;
-                top: 0;
-            }
-        }
+    #join-project{
+        display: none;
     }
-    
-  
-    
 }

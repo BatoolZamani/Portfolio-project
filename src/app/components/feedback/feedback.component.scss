@@ -1,0 +1,110 @@
+.feedback-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 100px;
+  
+    .header-title {
+      font-size: 32px;
+      font-family: 'Karla', monospace;
+      font-weight: 700;
+      color: #3DCFB6;
+      margin-bottom: 40px;
+    }
+  
+    .slider-container {
+      position: relative;
+      width: 70%;
+      overflow: hidden;
+  
+      .slider {
+        display: flex;
+        transition: transform 0.1s ease-in-out;
+        width: 100%;
+  
+        .slide {
+          min-width: 50%;
+          opacity: 0;
+          transition: opacity 0.2s ease-in-out;
+          padding: 30px;
+          background-color: #2b2b2b;
+          border: 1px solid #3DCFB6;
+          border-radius: 15px;
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+  
+          &.active {
+            opacity: 1;
+          }
+  
+          .feedback-text {
+            font-size: 20px;
+            font-family: 'Karla', monospace;
+            color: white;
+            margin-bottom: 30px;
+          }
+  
+          .feedback-author {
+            font-size: 18px;
+            font-family: 'Karla', monospace;
+            color: #3DCFB6;
+          }
+        }
+      }
+    }
+  
+    .dots {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+  
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+  
+        &.active {
+          background-color: #3DCFB6;
+        }
+      }
+    }
+  
+    .arrow {
+      background: none;
+      border: none;
+      color: #3DCFB6;
+      font-size: 32px;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s ease;
+      margin-top: -15px;
+      
+      &.left-arrow {
+        order: -1;
+      }
+      
+      &.right-arrow {
+        order: 1;
+      }
+  
+      &:hover {
+        color: #fff;
+      }
+  
+      &.left-arrow:hover {
+        transform: translateX(-5px);
+      }
+  
+      &.right-arrow:hover {
+        transform: translateX(5px);
+      }
+    }
+  }

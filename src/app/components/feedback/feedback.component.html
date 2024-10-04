@@ -1,0 +1,40 @@
+<section class="feedback-slider">
+    <div class="header-title">
+      What my colleagues say about me
+    </div>
+    
+    <div class="slider-container">
+     
+      
+   
+      <div class="slider">
+        
+        @for (feedback of feedbacks; track $index) {
+          <div class="slide" [class.active]="currentSlide === $index">
+            
+            <div class="feedback-text">
+              <p>{{ feedback.text }}</p>
+            </div>
+            <div class="feedback-author">
+             {{ feedback.author }} - {{ feedback.role }}
+            </div>
+          </div>
+        }
+      </div>
+      
+     
+    </div>
+    
+   
+    <div class="dots">
+        
+      <button class="arrow left-arrow" (click)="prevSlide()"><img src="assets/img/Arrow - back.svg" alt=""></button>
+     
+     
+      @for (feedback of feedbacks; track $index) {
+        <span class="dot" [class.active]="currentSlide === $index" (click)="goToSlide($index)"></span>
+      }
+       
+       <button class="arrow right-arrow" (click)="nextSlide()"><img src="assets/img/Arrow - forward.svg" alt=""></button>
+    </div>
+</section>

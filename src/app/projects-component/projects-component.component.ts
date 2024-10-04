@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './projects-component.component.scss'
 })
 export class ProjectsComponentComponent {
-  projects: { title: string; skills: string[] }[] = [
-    { title: 'Join', skills: ['Angular', 'TypeScript', 'HTML','Firebase'] },
-    { title: 'El Polo Loco', skills: ['HTML','CSS','JavaScript'] },
-    { title: 'Da Bubble', skills: ['Angular','Firebase','TypeScript'] }
+  projects: { id:string;imageurl:string; title: string; skills: string[] }[] = [
+    { id: 'join', title: 'Join',imageurl:'assets/img/joinscreen.png',skills: ['Angular', 'TypeScript', 'HTML','Firebase'] },
+    { id: 'elPoloLoco', title: 'El Polo Loco',imageurl:'assets/img/elpololocoscreen.png', skills: ['HTML','CSS','JavaScript'] },
+    { id: 'daBubble', title: 'Da Bubble',imageurl:'assets/img/Dabubble.png', skills: ['Angular','Firebase','TypeScript'] }
   ];
   
 }

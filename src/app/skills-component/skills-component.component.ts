@@ -14,15 +14,13 @@ export class SkillsComponentComponent {
     { image: './assets/img/html5.png', title: 'HTML' },
     { image: './assets/img/css.png', title: 'CSS' },
     { image: './assets/img/javascript.png', title: 'JavaScript' },
+    { image: './assets/img/Material Design.png', title: 'Material Design' },
     { image: './assets/img/typescript.png', title: 'TypeScript' },
     { image: './assets/img/angular.png', title: 'Angular' },
     { image: './assets/img/firebase.png', title: 'Firebase' },
-    { image: './assets/img/html5.png', title: 'HTML' },
-    { image: './assets/img/css.png', title: 'CSS' },
-    { image: './assets/img/javascript.png', title: 'JavaScript' },
-    { image: './assets/img/typescript.png', title: 'TypeScript' },
-    { image: './assets/img/angular.png', title: 'Angular' },
-    { image: './assets/img/firebase.png', title: 'Firebase' },
+    { image: './assets/img/Gitskill.png', title: 'Git' },
+    { image: './assets/img/Rest-Api.png', title: 'Rest-Api' },
+    { image: './assets/img/Scrum.png', title: 'Scrum' },
     { image: './assets/img/Growthmindset.png', title: 'Growth mindset' }
   ];
 }

@@ -11,29 +11,32 @@
         </div>
         <div class="projects">
             @for (project of projects; track $index) {
-                <div class="project-container">
-                    <div class="title-container">
-                        <span>{{project.title}}</span>
-                        <div><img src="assets/img/arrow_outward.png" alt=""></div>
+                <div class="project-container" id="{{project.id}}">
+                    <div class="left">
+                        <div class="title-container">
+                            <span>{{project.title}}</span>
+                            <div><img src="assets/img/arrow_outward.png" alt=""></div>
+                        </div>
+                        <ul>
+                            <li>
+                                {{project.skills}}
+                                <span > | </span>
+                            </li>
+                            
+                            
+                        </ul>
                     </div>
-                    <ul>
-                        <li>
-                            {{project.skills}}
-                            <span > | </span>
-                        </li>
-                        
-                        
-                    </ul>
+                    <div class="right-side">
+                        <div class="project-screen-container">
+                            <!-- <img class="back-line" src="assets/img/background-line.png" alt="Background Line"> -->
+                            <img class="main-image" id="join-project" src="{{project.imageurl}}" alt="Main Image">
+                        </div>
+                    </div>
                 </div>
             }
         </div>
     </div>
     
    
-    <div class="right-side">
-        <div class="project-screen-container">
-            <img class="back-line" src="assets/img/background-line.png" alt="Background Line">
-            <img class="main-image" src="assets/img/joinscreen.png" alt="Main Image">
-        </div>
-    </div>
+    
 </section>
