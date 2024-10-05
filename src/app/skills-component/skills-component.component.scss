@@ -56,7 +56,9 @@ section {
     .skill-position{
         display: flex;
         flex-direction: column;
-        
+        overflow-wrap: break-word;
+        width: 64px;
+        text-align: center;
         
         span{
             display: flex;

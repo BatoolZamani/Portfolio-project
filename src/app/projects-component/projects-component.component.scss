@@ -30,6 +30,8 @@ section{
             padding-bottom: 41px;
         }
         .projects{
+            position: relative;
+            width: 100%;
            
             .project-container {
                 display: flex;
@@ -40,7 +42,6 @@ section{
                 padding-right: 32px;
                 padding-top: 30px;
                 padding-bottom: 30px;
-                position: relative;
                 width: 60%;
                
                 &:hover {
@@ -83,7 +84,10 @@ section{
                 }
 
                 .right-side {
-                    flex-direction: column;
+                    width: 40%;
+                    position: absolute;
+                    right: 0px;
+
                 
                     .project-screen-container {
                         display: flex;
@@ -119,6 +123,7 @@ section{
                         }
                     }
                 }
+                }
 
             }
             .project-container span{
@@ -145,4 +150,3 @@ section{
     #join-project{
         display: none;
     }
-}

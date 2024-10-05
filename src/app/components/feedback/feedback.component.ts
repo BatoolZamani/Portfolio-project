@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-feedback',
-  standalone: true,
-  imports: [],
   templateUrl: './feedback.component.html',
-  styleUrl: './feedback.component.scss'
+  styleUrls: ['./feedback.component.scss'],
+  standalone: true,
+  imports: [CommonModule] // Ensure CommonModule is imported
 })
 export class FeedbackSliderComponent {
   feedbacks = [
@@ -16,23 +17,33 @@ export class FeedbackSliderComponent {
 
   currentSlide = 0;
 
-  nextSlide() {
-    if (this.currentSlide < this.feedbacks.length - 1) {
-      this.currentSlide++;
-    } else {
-      this.currentSlide = 0; // Loop back to the first slide
-    }
+  // Go to the next slide, wrapping around when necessary
+  nextSlide(): void {
+    this.currentSlide = (this.currentSlide + 1) % this.feedbacks.length;
   }
 
-  prevSlide() {
-    if (this.currentSlide > 0) {
-      this.currentSlide--;
-    } else {
-      this.currentSlide = this.feedbacks.length - 1; // Loop to the last slide
-    }
+  // Go to the previous slide, wrapping around when necessary
+  prevSlide(): void {
+    this.currentSlide = (this.currentSlide - 1 + this.feedbacks.length) % this.feedbacks.length;
   }
 
-  goToSlide(slideIndex: number) {
+  // Go to a specific slide
+  goToSlide(slideIndex: number): void {
     this.currentSlide = slideIndex;
+  }
+
+  // Helper to check if a slide is active
+  isActive(index: number): boolean {
+    return this.currentSlide === index;
+  }
+
+  // Helper to check if a slide is the previous one
+  isPrev(index: number): boolean {
+    return (this.currentSlide - 1 + this.feedbacks.length) % this.feedbacks.length === index;
+  }
+
+  // Helper to check if a slide is the next one
+  isNext(index: number): boolean {
+    return (this.currentSlide + 1) % this.feedbacks.length === index;
   }
 }
