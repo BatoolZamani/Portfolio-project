@@ -9,16 +9,18 @@ import { SkillsComponentComponent } from './skills-component/skills-component.co
 import { ProjectsComponentComponent } from "./projects-component/projects-component.component";
 import { MarqueeComponent } from './components/marquee/marquee.component';
 import { FeedbackSliderComponent } from './components/feedback/feedback.component';
+import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent,FeedbackSliderComponent],
+  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent,FeedbackSliderComponent,ProjectModalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Portfolio-project';
+  
 }
