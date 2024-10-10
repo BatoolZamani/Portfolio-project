@@ -5,7 +5,7 @@ body {
   font-family: 'Fira', sans-serif;
 }
 .modal-wrapper{
-    display: block;
+    display: none;
 }
 .button-position {
   display: flex;
@@ -40,9 +40,7 @@ body {
   }
 }
 
-.modal-wrapper {
-  display: block;
-}
+
 
 .modal {
     position: fixed;

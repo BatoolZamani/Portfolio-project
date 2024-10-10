@@ -10,13 +10,14 @@ import { ProjectsComponentComponent } from "./projects-component/projects-compon
 import { MarqueeComponent } from './components/marquee/marquee.component';
 import { FeedbackSliderComponent } from './components/feedback/feedback.component';
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent,FeedbackSliderComponent,ProjectModalComponent],
+  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent,FeedbackSliderComponent,ProjectModalComponent,ContactMeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
