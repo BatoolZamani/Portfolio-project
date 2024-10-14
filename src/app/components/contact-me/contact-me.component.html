@@ -14,27 +14,26 @@
     <div class="right">
         
         <div class="container">
-            <form action="action_page.php">
-          
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <br>
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <br>
-              <label for="country">Country</label>
-              <select id="country" name="country">
-                
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
-               <br>
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <form (ngSubmit)=" onSubmit(contactForm)" #contactForm="ngForm">
+              
+              <label for="name">What's your name?</label>
+              <input [(ngModel)]="contactData.name" type="text" id="fname" name="firstname" placeholder="Your name.." required="">
+               
               <br>
-              <input type="submit" value="Submit">
-          
+              <label for="email">What's your email?</label>
+              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+               
+              <br>
+             
+               <br>
+              <label for="message">Subject</label>
+              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.." style="height:200px" ></textarea>
+              @if(!message.valid && message.touched){
+                <span>Please enter a message</span>
+              }
+              <br>
+              <input  type="submit" value="Submit">
+              <br><br><br>
             </form>
           </div>
     </div>
