@@ -42,7 +42,7 @@ section{
         .container form{
             display: flex;
             flex-direction: column;
-            width: 40%;
+            
              .line{
                 width: 100%;
                 margin-top: 32px;
@@ -75,6 +75,23 @@ section{
                     }
                 }
              }
+             .center{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button{
+                    padding: 13px 24px;
+                    background-color: transparent;
+                    border: solid 1px rgb(255, 255, 255);
+                    border-radius: 100px;
+                    color: #fff;
+                    font-family: 'Karla', monospace;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    font-weight: 400;
+                    transition: all .1s ease-in-out;
+                }
+            }
              label{
                 font-family: Fira Code;
                 font-weight: 500;
@@ -111,4 +128,6 @@ section{
             border-radius: 4px;
             cursor: pointer;
         }
+        
+        
     }
