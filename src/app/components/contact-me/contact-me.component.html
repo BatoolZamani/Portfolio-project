@@ -15,23 +15,32 @@
         
         <div class="container">
             <form (ngSubmit)=" onSubmit(contactForm)" #contactForm="ngForm">
-              
+              <div class="line"></div>
               <label for="name">What's your name?</label>
               <input [(ngModel)]="contactData.name" type="text" id="fname" name="firstname" placeholder="Your name.." required="">
                
-              <br>
+              <div class="line"></div>
               <label for="email">What's your email?</label>
               <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                
-              <br>
-             
-               <br>
+              <div class="line"></div>
               <label for="message">Subject</label>
               <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.." style="height:200px" ></textarea>
               @if(!message.valid && message.touched){
                 <span>Please enter a message</span>
               }
-              <br>
+              <div class="line last-line"></div>
+              <div class="check-legal">
+                <label for="legal" class="custom-checkbox" >
+                    <input type="checkbox" name="legal" id="legal">
+                    <span class="checkmark"></span>
+                </label>
+                <span class="legal-text">
+                  I've read the
+                  <a href="privacy">privacy policy</a>
+                  and agree to the processing of my data as outlined.
+                </span>
+              </div>
               <input  type="submit" value="Submit">
               <br><br><br>
             </form>
