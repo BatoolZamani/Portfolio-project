@@ -48,12 +48,34 @@
     font-size: 16px;
     line-height: 19.2px;
 }
-.right a{
+.right a {
     position: relative;
     color: #fff;
     text-decoration: none;
-    transition: all .1s ease-in-out;
-    :hover{
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
         color: #3dcfb6;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &:hover::after {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #3dcfb6;
+        border-radius: 50%;
     }
 }
