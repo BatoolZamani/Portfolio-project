@@ -90,6 +90,7 @@ section{
                     line-height: 21.6px;
                     font-weight: 400;
                     transition: all .1s ease-in-out;
+                    margin-top: 32px;
                 }
             }
              label{
@@ -115,12 +116,22 @@ section{
             font-size: 18px;
             line-height: 21.6px;
             color: #fffc;
+            
         }
-        textarea{
+        input[type=text],[type=email],select,textarea:focus{
+            border: none;
+            outline: none; 
+        }
+
+        textarea {
             overflow: auto;
             resize: vertical;
-            min-height: 120px;
+            min-height: 100px;
+            
         }
+        
+      
+       
         input[type=submit]{
             background-color: #3DCFB6;
             color: white;
