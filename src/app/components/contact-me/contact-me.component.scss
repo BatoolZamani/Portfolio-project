@@ -1,144 +1,176 @@
-section{
+/* Universal Styling (Optional, but can cause unintended side effects) */
+/* * {
+    border: 1px solid red;
+} */
+
+section {
     width: 90%;
     display: flex;
     flex-direction: row;
     padding-left: 5%;
     padding-right: 5%;
-    .left{
-        display: flex;
-        flex-direction: column;
-        font-family: 'Karla', monospace;        
-        width: 43%;
-        color: #3DCFB6;
-        padding-right: 2%;
-        .title{
-            font-size: 24px;
-            
-            font-weight: 500;
-        }
-        .title-work-together{
-            font-size: 64px;
-            font-family: 'Fira', sans-serif;
-        }
-        .sub-title{
-            font-size: 24px;
-            font-family: 'Fira', sans-serif;
-            font-weight: 700;
-        }
-        .description{
-            color: white;
-            font-size: 16px;
-            a{
-                text-decoration: none;
-                color: #3DCFB6;
-            }
-        }
-    }
-    .right{
-        display: flex;
-        flex-direction: column;
-        color: white;
-        width: 45%;
-        .container form{
-            display: flex;
-            flex-direction: column;
-            
-             .line{
-                width: 100%;
-                margin-top: 32px;
-                height: 1px;
-                background-color: #3dcfb680;
-             }
-             .last-line{
-                margin-bottom: 32px;
-             }
-             .check-legal{
-                margin-left: 32px;
-                display: flex;
-                align-items: center;
-                .legal-text a{
-                    text-decoration: none;
-                    color:#3DCFB6 ;
-                }
-                .custom-checkbox{
-                    position: relative;
-                    display: inline-block;
-                    width: 24px;
-                    height: 24px;
-                    padding: 0;
-                    input{
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                    }
-                }
-             }
-             .center{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                button{
-                    padding: 13px 24px;
-                    background-color: transparent;
-                    border: solid 1px rgb(255, 255, 255);
-                    border-radius: 100px;
-                    color: #fff;
-                    font-family: 'Karla', monospace;
-                    font-size: 18px;
-                    line-height: 21.6px;
-                    font-weight: 400;
-                    transition: all .1s ease-in-out;
-                    margin-top: 32px;
-                }
-            }
-             label{
-                font-family: Fira Code;
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 28.8px;
-                color: #3dcfb6;
-                padding-left: 32px;
-                padding-top: 32px;
-             }
+}
 
-            }
-        }
-        input[type=text],[type=email],select,textarea{
-            background-color: transparent;
-            border: none;
-            margin-top: 16px;
-            margin-left: 32px;
-            margin-right: 32px;
-            font-family: Karla;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21.6px;
-            color: #fffc;
-            
-        }
-        input[type=text],[type=email],select,textarea:focus{
-            border: none;
-            outline: none; 
-        }
+section .left {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Karla', monospace;
+    width: 43%;
+    color: #3DCFB6;
+    padding-right: 2%;
+}
 
-        textarea {
-            overflow: auto;
-            resize: vertical;
-            min-height: 100px;
-            
-        }
-        
-      
+section .left .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+section .left .title-work-together {
+    font-size: 64px;
+    font-family: 'Fira', sans-serif;
+}
+
+section .left .sub-title {
+    font-size: 24px;
+    font-family: 'Fira', sans-serif;
+    font-weight: 700;
+}
+
+section .left .description {
+    color: white;
+    font-size: 16px;
+}
+
+section .left .description a {
+    text-decoration: none;
+    color: #3DCFB6;
+}
+
+section .right {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 45%;
+}
+
+section .right .container form {
+    display: flex;
+    flex-direction: column;
+}
+
+section .right .container form .line {
+    width: 100%;
+    margin-top: 32px;
+    height: 1px;
+    background-color: #3dcfb680;
+}
+
+section .right .container form .last-line {
+    margin-bottom: 32px;
+}
+
+section .right .container form .check-legal {
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+}
+
+section .right .container form .check-legal .legal-text a {
+    text-decoration: none;
+    color: #3DCFB6;
+}
+
+section .right .container form .check-legal .custom-checkbox {
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        margin: 5px;
+        border: 2px solid #3DCFB6;  /* Green border */
+        border-radius: 5px;
+
        
-        input[type=submit]{
-            background-color: #3DCFB6;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        
     }
+
+section .right .container form .check-legal .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 34px;
+        height: 34px;
+}
+
+
+
+section .right .container form .check-legal .custom-checkbox .checkbox {
+    border-color: #3DCFB6;
+}
+
+section .right .container form .center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section .right .container form .center button {
+    padding: 13px 24px;
+    background-color: transparent;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 100px;
+    color: #fff;
+    font-family: 'Karla', monospace;
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+    margin-top: 32px;
+}
+
+section .right .container form label {
+    font-family: 'Fira Code';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: #3dcfb6;
+    padding-left: 32px;
+    padding-top: 32px;
+}
+
+section .right input[type=text],
+section .right input[type=email],
+section .right select,
+section .right textarea {
+    background-color: transparent;
+    border: none;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-right: 32px;
+    font-family: 'Karla', monospace;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #fffc;
+}
+
+section .right input[type=text]:focus,
+section .right input[type=email]:focus,
+section .right select:focus,
+section .right textarea:focus {
+    border: none;
+    outline: none;
+}
+
+section .right textarea {
+    overflow: auto;
+    resize: vertical;
+    min-height: 100px;
+}
+
+section .right input[type=submit] {
+    background-color: #3DCFB6;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
