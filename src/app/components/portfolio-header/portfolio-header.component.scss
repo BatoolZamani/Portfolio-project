@@ -129,37 +129,103 @@ input:checked ~ div .de {
     border-radius: 25px;
   }
   
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 27px;
-    width: 46px;
-    left: 0px;
-    bottom: 0px;
-    background-color: #3dcfb6;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 25px;
-  }
-  
-  input:checked + .slider {
-    background-color: transparent;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px transparent;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(36px);
-    -ms-transform: translateX(36px);
-    transform: translateX(36px);
-  } 
+.slider:before {
+position: absolute;
+content: "";
+height: 27px;
+width: 46px;
+left: 0px;
+bottom: 0px;
+background-color: #3dcfb6;
+-webkit-transition: .4s;
+transition: .4s;
+border-radius: 25px;
+}
 
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+input:checked + .slider {
+background-color: transparent;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px transparent;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(36px);
+-ms-transform: translateX(36px);
+transform: translateX(36px);
+} 
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+
+.responsive-menu {
+
+display: none;
+align-items: center;
+
+}
+.responsive-menu:hover {
+
+   cursor: pointer;
+   
+    
+}
+.hamburger{
+    width: 32px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.hamburger-line{
+    height: 1px;
+    background-color: #fff;
+    transition: all .1s ease-in-out;
+}
+.hamburger:hover .hamburger-line {
+    background-color: #3DCFB6; 
+}
+  @media (max-width: 900px) {
+    section { /* Stelle sicher, dass du die richtige Klasse anvisierst */
+        padding-left: 34px; /* Neues Padding für links */
+        padding-right: 34px; /* Neues Padding für rechts */
+        padding-top: 18px; /* Beibehaltung des Top-Paddings */
+    }
+    .menu-content{
+        display: none;
+    }
+    .responsive-menu{
+    display: flex;
+    }
+    .logo-section img {
+        width: 80px;
+        height: 100px;
+    }
+    
+        .menu-content{
+            position: absolute;
+            display: flex;
+            gap: 20px;
+            border-radius: 30px;
+            
+            padding: 40px 77px;
+            top: 120px;
+            right: 0;
+            z-index: 5;
+            background-image: linear-gradient(to top right, #1c1c1c 0 40%, 80%, #08463b);
+            flex-direction: column-reverse;
+            transition: transform 125ms ease-in-out;
+            align-items: flex-start;
+        }
+        .menu-content a {
+            padding-left: 0px;
+        }
+}
