@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class FeedbackSliderComponent {
   feedbacks = [
-    { text: 'Our project benefited enormously from Simon’s efficient way of working.', author: 'T. Schulz', role: 'Frontend Developer' },
-    { text: 'Lukas has proven to be a reliable asset with strong technical skills and a proactive approach.', author: 'A. Fischer', role: 'Team Partner' },
-    { text: 'Working with Lukas has been an incredibly rewarding experience.', author: 'C. Anderson', role: 'Project Manager' }
+    { text: 'I had the pleasure of working with Batool on two projects in the Developer Academy (DA). Their technical expertise and outstanding understanding of design, as well as their helpfulness and willingness to give their all, were crucial to the success of our team.', author: 'Sebastian Rothe', role: 'Team Partner' },
+    { text: 'Batool is an exceptional coder with strong UI design skills, consistently delivering high-quality, user-friendly, and functional designs. She is reliable under pressure, meets deadlines, and goes the extra mile to ensure project success. Her technical expertise and dedication make her a valuable asset to any team.', author: 'Muaz Yildiz', role: 'Team Partner' },
+    { text: 'I worked with Betty on the cookery world project. She is an extremely structured, personable and nice lady. You could tell that from the first few minutes. She was also by far the best designer in our group. As fast as she was, she was also focussed and determined. I really enjoyed working with Betty. She is someone you would always want in a group project.', author: 'Emre Isik', role: 'Team Partner' }
   ];
 
   currentSlide = 0;
