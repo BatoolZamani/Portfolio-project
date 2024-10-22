@@ -21,7 +21,9 @@ export class SkillsComponentComponent {
     { image: './assets/img/Gitskill.png', title: 'Git' },
     { image: './assets/img/Rest-Api.png', title: 'Rest-Api' },
     { image: './assets/img/Scrum.png', title: 'Scrum' },
+    { image: './assets/img/figma-icon.png', title: 'Figma' },
     { image: './assets/img/Growthmindset.png', title: 'Growth mindset' }
+   
   ];
 }
 
