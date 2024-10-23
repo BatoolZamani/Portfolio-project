@@ -94,6 +94,7 @@ section .right .container form label:last-child {
     line-height: 18px;
     color: #fff;
     padding-top: 0px;
+    
     padding-right: 10px;
 
 }
@@ -150,6 +151,7 @@ section .right .container form .center{
    
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 /* Checkbox styling */
@@ -202,4 +204,16 @@ section .right input[type=submit]:hover {
     background-color: #3DCFB6;
     border: solid 1px #fff;
     cursor: pointer;
+}
+@media (max-width: 900px) {
+    section{
+        flex-direction: column;
+        margin-left: 40px;
+    }
+    section .left{
+        width: 100%;
+    }
+    section .right {
+        width: 100%;
+    }
 }
