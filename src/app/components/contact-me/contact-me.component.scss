@@ -1,21 +1,19 @@
-/* Universal Styling (Optional, but can cause unintended side effects) */
-/* * {
-    border: 1px solid red;
-} */
+
 
 section {
-    width: 90%;
+    width:84%;
     display: flex;
     flex-direction: row;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
+/* Left section styling */
 section .left {
     display: flex;
     flex-direction: column;
     font-family: 'Karla', monospace;
-    width: 43%;
+    width: 50%;
     color: #3DCFB6;
     padding-right: 2%;
 }
@@ -46,13 +44,15 @@ section .left .description a {
     color: #3DCFB6;
 }
 
+/* Right section styling */
 section .right {
     display: flex;
     flex-direction: column;
     color: white;
-    width: 45%;
+    width: 50%;
 }
 
+/* Form container and line separator */
 section .right .container form {
     display: flex;
     flex-direction: column;
@@ -69,113 +69,33 @@ section .right .container form .last-line {
     margin-bottom: 32px;
 }
 
-section .right .container form .check-legal {
-    margin-left: 32px;
-    display: flex;
-    align-items: center;
-}
-
-section .right .container form .check-legal .legal-text a {
-    text-decoration: none;
-    color: #3DCFB6;
-}
-
-/* Standard-Checkbox-Styling */
-// section .right .container form .check-legal .custom-checkbox {
-//     position: relative;
-//     display: inline-block;
-//     width: 24px;
-//     height: 24px;
-//     padding: 0;
-//     margin: 5px;
-//     border: 2px solid #3DCFB6;
-//     border-radius: 5px;
-//     background-color: transparent; 
-// }
-
-/* Checkbox hidden */
-// section .right .container form .check-legal .custom-checkbox input {
-//     position: absolute;
-//     opacity: 1;
-//     cursor: pointer;
-//     width: 14px;
-//     height: 14px;
-//     border: solid #3DCFB6; /* Green color for the check mark */
-// }
-/* Standard-Checkbox-Styling */
-// section .right .container form .check-legal .custom-checkbox input {
-//     position: absolute;
-//     opacity: 1;
-//     cursor: pointer;
-//     width: 14px;
-//     height: 14px;
-//     border: 2px solid #3DCFB6; 
-//     border-radius: 3px;
-// }
-
-[type="checkbox"] {
-    position: relative;
-    left: 15px;
-    top: -4px;
-    z-index: 0;
-    -webkit-appearance: none;
-  }
-  [type="checkbox"] + label {
-    position: absolute;
-  }
-  [type="checkbox"] + label::before {
-    width: 15px;
-    height: 15px;
-    border-radius: 5px;
-    border: 2px solid  #3DCFB6;
-    background-color: #292929;
-    display: block;
-    content: "";
-    float: left;
-    margin-right: 5px;
-    z-index: 5;
-    position: relative;
-  }
-  [type="checkbox"]:checked+label::before {
-    box-shadow: inset 0px 0px 0px 3px #fff;
-    background-color:  #3DCFB6;
-  }
-
-
-
-section .right .container form .check-legal .custom-checkbox .checkbox {
-    border-color: #3DCFB6;
-    
-}
-
-section .right .container form .center {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-section .right .container form .center button {
-    padding: 13px 24px;
-    background-color: transparent;
-    border: solid 1px rgb(255, 255, 255);
-    border-radius: 100px;
-    color: #fff;
-    font-family: 'Karla', monospace;
-    font-size: 18px;
-    line-height: 21.6px;
-    font-weight: 400;
-    transition: all 0.1s ease-in-out;
-    margin-top: 32px;
-}
-
-section .right .container form label {
-    font-family: 'Fira Code';
+/* Label and input styling */
+section .right .container form label{
+    font-family: Fira Code;
     font-weight: 500;
     font-size: 24px;
-    line-height: 28.8px;
+    line-height: 18px;
     color: #3dcfb6;
     padding-left: 32px;
     padding-top: 32px;
+
+}
+section .right .container form label a{
+    
+    color: #3dcfb6;
+    text-decoration: none;
+
+}
+section .right .container form label:last-child {
+    font-family: 'Karla', monospace;
+    font-size: 18px;
+    margin-left: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fff;
+    padding-top: 0px;
+    padding-right: 10px;
+
 }
 
 section .right input[type=text],
@@ -202,16 +122,84 @@ section .right textarea:focus {
     outline: none;
 }
 
+/* Textarea resize behavior */
 section .right textarea {
     overflow: auto;
     resize: vertical;
     min-height: 100px;
 }
 
-section .right input[type=submit] {
+/* Button styling */
+section .right input[type=submit],
+section .right .container form .center button {
+    padding: 13px 24px;
+    background-color: transparent;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 100px;
+    color: #fff;
+    font-family: 'Karla', monospace;
+    font-size: 18px;
+    line-height: 21.6px;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+    margin-top: 32px;
+    cursor: pointer;
+    
+}
+section .right .container form .center{
+   
+    display: flex;
+    justify-content: center;
+}
+
+/* Checkbox styling */
+[type="checkbox"] {
+    position: relative;
+    left: 15px;
+    top: -4px;
+    z-index: 0;
+    -webkit-appearance: none;
+}
+
+[type="checkbox"] + label {
+    position: absolute;
+}
+
+[type="checkbox"] + label::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 2px solid #3DCFB6;
+    background-color: #292929;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
+    z-index: 5;
+    position: relative;
+}
+
+[type="checkbox"]:checked + label::before {
+    box-shadow: inset 0px 0px 0px 3px #292929;
     background-color: #3DCFB6;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 4px;
+}
+
+/* Legal text and privacy policy styling */
+section .right .container form .check-legal {
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+section .right .container form .check-legal .legal-text a {
+    text-decoration: none;
+    color: #3DCFB6;
+}
+
+/* Submit button hover behavior */
+section .right input[type=submit]:hover {
+    background-color: #3DCFB6;
+    border: solid 1px #fff;
     cursor: pointer;
 }
