@@ -3,7 +3,7 @@
     What my colleagues say about me
   </div>
 
-  <div class="slider-container">
+  <div class="slider-container" #sliderContainer>
     <div class="slider">
       <!-- Loop through feedbacks to create slides -->
       <div 
@@ -27,7 +27,7 @@
 
   <div class="dots">
     <button class="arrow left-arrow" (click)="prevSlide()">
-      <img src="assets/img/Arrow-back.svg" alt="">
+      <img src="assets/img/Arrow-back.svg" alt="Back Arrow">
     </button>
 
     <!-- Dots for each slide -->
@@ -39,7 +39,7 @@
     ></span>
 
     <button class="arrow right-arrow" (click)="nextSlide()">
-      <img src="assets/img/Arrow-forward.svg" alt="">
+      <img src="assets/img/Arrow-forward.svg" alt="Forward Arrow">
     </button>
   </div>
 </section>

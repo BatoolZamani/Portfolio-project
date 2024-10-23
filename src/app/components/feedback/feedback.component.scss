@@ -35,12 +35,14 @@
   
       .slider {
         display: flex;
-        transition: transform 0.1s ease-in-out;
-        width: 70%;
+         transition: transform 0.1s ease-in-out;
+      width: 70%;
+        // transition: transform 0.5s ease-in-out;  /* Smooth transition */
+      // width: max-content; /* Ensure all slides fit horizontally */
   
         .slide {
           min-width: 50%;
-          opacity: 0;
+          // opacity: 0;
           transition: opacity 0.2s ease-in-out;
           padding: 30px;
           background-color: #2b2b2b;
@@ -50,10 +52,19 @@
           display: flex;
           flex-direction: column;
           align-items: end;
-         
+          // margin: 20px;
+          opacity: 0.4; /* Default reduced opacity */
+        filter: blur(5px); /* Default blur for non-active slides */
+        transition: opacity 0.3s ease, filter 0.3s ease;
+        margin: 0 15px; /* Add space between slides */
   
           &.active {
-            opacity: 1;
+            opacity: 1; /* Fully visible for active slide */
+            filter: blur(0px); /* No blur for active slide */
+          }
+          &.prev, &.next {
+            opacity: 0.6; /* Slightly more visible for adjacent slides */
+            filter: blur(2px); /* Slight blur for adjacent slides */
           }
   
           .feedback-text {
@@ -87,7 +98,7 @@
         cursor: pointer;
   
         &.active {
-          background-color: #3DCFB6;
+          background-color: #135d50;
         }
 
         

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss'],
   standalone: true,
-  imports: [CommonModule] // Ensure CommonModule is imported
+  imports: [CommonModule]
 })
 export class FeedbackSliderComponent {
   feedbacks = [
