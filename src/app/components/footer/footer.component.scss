@@ -82,3 +82,28 @@
         border-radius: 50%;
     }
 }
+.my-name-responsive{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .mitte{
+       display: none;
+    }
+    .content{
+        
+        margin-left:20px;
+        margin-right: 20px;
+    }
+    .my-name-responsive{
+        display: flex;
+        justify-content: center;
+        font-family: 'Fira', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21.6px;
+        color: #3dcfb6;
+        margin-top: 30px;
+    }
+   
+}
