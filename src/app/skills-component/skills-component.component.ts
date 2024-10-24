@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { BoxContentComponent } from '../components/box-content/box-content.component';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills-component',
   standalone: true,
-  imports: [BoxContentComponent,CommonModule],
+  imports: [BoxContentComponent,CommonModule,TranslateModule],
   templateUrl: './skills-component.component.html',
   styleUrl: './skills-component.component.scss'
 })

@@ -1,28 +1,25 @@
-
 <section>
     <div class="menu-content">
-        <label class="toggle-switch">
-            <input type="checkbox" id="language">
-            <span class="slider raund"></span>
-            <div>
-                <span class="text en">EN</span>
-                <span class="text de">DE</span>
-            </div>
-        </label>
-        <a href="#aboutscroll">About me</a>
-        <a href="#skillsscroll">Skills</a>
-        <a href="#Projectsscroll" fragment="projects-section">Projects</a>
+      <label class="toggle-switch">
+        <input type="checkbox" id="language" (change)="switchLanguage(language.checked ? 'de' : 'en')" #language>
+        <span class="slider round"></span>
+        <div>
+          <span class="text en">EN</span>
+          <span class="text de">DE</span>
+        </div>
+      </label>
+      <a href="#aboutscroll">{{ 'ABOUT_ME' | translate }}</a>
+      <a href="#skillsscroll">{{ 'SKILLS' | translate }}</a>
+      <a href="#Projectsscroll">{{ 'PROJECTS' | translate }}</a>
     </div>
     <div class="logo-section">
-        <img src="assets/img/mylogo.png" alt="">
+      <img src="assets/img/mylogo.png" alt="">
     </div>
     <div class="responsive-menu">
-        <div class="hamburger">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-        </div>
-        
+      <div class="hamburger">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </div>
     </div>
-    
-</section>
+  </section>

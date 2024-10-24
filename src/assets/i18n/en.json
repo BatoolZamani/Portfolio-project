@@ -1,0 +1,20 @@
+{
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "AVAILABLE_FOR_REMOTE_WORK": "Available for remote work",
+    "FRONTEND_DEVELOPER": "Frontend Developer",
+    "BASE_IN_GREVENBROICH": "Based in Grevenbroich",
+    "ABOUT_ME_DESCRIPTION":"Hi, I'm a Frontend Developer based in Grevenbroich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+    "ABOUT_ME_LOCATION":"Based in Grevenbroich, I am available to work efficiently on-site in Düsseldorf and Cologne, as well as remotely.",
+    "ABOUT_ME_OPEN_MIND":"I am open-minded and constantly challenge myself in my personal and professional projects to further improve my knowledge and skills.",
+    "ABOUT_ME_CREATIVE_SOLUTIONS":"To me, programming is more than just writing code. It involves understanding real-world needs and transforming them into technical solutions. I take great pride in creatively and elegantly solving problems, which enhances usability and user experience, ultimately driving the success of each project.",
+
+    "ABOUT_ME_HEADER":"About Me",
+    "WHO_AM_I":"Who am I",
+
+    "CONTACT_ME_BUTTON":"Contact me",
+    "CHECK_MY_WORK":"Check my work",
+
+    "SKILL_DESCRIPTION":" My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development"
+  }

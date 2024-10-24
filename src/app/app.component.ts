@@ -13,16 +13,35 @@ import { ProjectModalComponent } from './components/project-modal/project-modal.
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
+// Für ngx-translate
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PortfolioHeaderComponent, IntroductionComponent, AboutMeComponentComponent, BoxContentComponent, SkillsComponentComponent, ProjectsComponentComponent,ProjectsComponentComponent,MarqueeComponent,FeedbackSliderComponent,ProjectModalComponent,ContactMeComponent,FooterComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    PortfolioHeaderComponent,
+    IntroductionComponent,
+    AboutMeComponentComponent,
+    BoxContentComponent,
+    SkillsComponentComponent,
+    ProjectsComponentComponent,
+    MarqueeComponent,
+    FeedbackSliderComponent,
+    ProjectModalComponent,
+    ContactMeComponent,
+    FooterComponent,
+    // ngx-translate Imports
+    HttpClientModule,
+    TranslateModule
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Portfolio-project';
-  
+
 }

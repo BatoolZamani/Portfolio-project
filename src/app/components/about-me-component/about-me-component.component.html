@@ -8,15 +8,17 @@
         </div>
     </div>
     <div class="right-seide">
-        <app-box-content title="Who am I" header="About Me">
-            Hi, I'm a Frontend Developer based in Grevenbroich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.
+        <app-box-content title="{{'WHO_AM_I'| translate }}" header="{{'ABOUT_ME_HEADER'| translate }}">
+            {{ 'ABOUT_ME_DESCRIPTION' | translate }}
+            
             <div class="about-me-details-container">
 
                 <div class="about-me-details">
                 <div class="icon"><img src="assets/img/About-me-Highlights-icons.svg" alt=""></div>
                 <div class="description" >
                     <span>
-                        Based in Grevenbroich, I am available to work efficiently on-site in Düsseldorf and Cologne, as well as remotely.
+                        {{ 'ABOUT_ME_LOCATION' | translate }}
+                       
                     </span>
                 </div>
                 </div>
@@ -25,7 +27,8 @@
                     <div class="icon"><img src="assets/img/About-me-mind-Highlights-icons.svg" alt=""></div>
                     <div class="description" >
                         <span>
-                            I am open-minded and constantly challenge myself in my personal and professional projects to further improve my knowledge and skills.
+                            {{ 'ABOUT_ME_OPEN_MIND' | translate }}
+                           
                         </span>                  
                     </div>
                 </div>
@@ -34,7 +37,8 @@
                     <div class="icon"><img src="assets/img/About-me-Highlights-icons(2).svg" alt=""></div>
                     <div class="description" >
                         <span>
-                            To me, programming is more than just writing code. It involves understanding real-world needs and transforming them into technical solutions. I take great pride in creatively and elegantly solving problems, which enhances usability and user experience, ultimately driving the success of each project.
+                            {{ 'ABOUT_ME_CREATIVE_SOLUTIONS' | translate }}
+                            
                         </span>                   
                     </div>
                 </div>

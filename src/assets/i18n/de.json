@@ -1,0 +1,22 @@
+{
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",  
+
+    "AVAILABLE_FOR_REMOTE_WORK": "Für Remote-Arbeit verfügbar",    
+    "FRONTEND_DEVELOPER": "Frontend Developer",
+    "BASE_IN_GREVENBROICH": "Heimat Grevenbroich",
+
+    "ABOUT_ME_DESCRIPTION":"Hallo, ich bin ein Frontend-Entwickler aus Grevenbroich. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.",
+    "ABOUT_ME_LOCATION":"In Grevenbroich zu Hause, kann ich sowohl vor Ort in Düsseldorf und Köln als auch remote effektiv arbeiten.",  
+    "ABOUT_ME_OPEN_MIND":"Ich bin aufgeschlossen und stelle mich in meinen persönlichen und beruflichen Projekten ständig der Herausforderung, mein Wissen und meine Fähigkeiten weiter zu verbessern.",
+    "ABOUT_ME_CREATIVE_SOLUTIONS":"Für mich ist Programmieren mehr als nur das Schreiben von Code. Es geht darum, reale Bedürfnisse zu verstehen und sie in technische Lösungen zu verwandeln. Ich bin sehr stolz darauf, Probleme kreativ und elegant zu lösen, was die Benutzerfreundlichkeit und das Benutzererlebnis verbessert und letztendlich zum Erfolg jedes Projekts beiträgt.",
+
+    "ABOUT_ME_HEADER":"Über mich",
+    "WHO_AM_I":"Wer ich bin",
+
+    "CONTACT_ME_BUTTON":"Schreiben Sie mir",
+    "CHECK_MY_WORK":"Meine Projekte",
+
+    "SKILL_DESCRIPTION":"Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung vorne zu bleiben."
+  }
