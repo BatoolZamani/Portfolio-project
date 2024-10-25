@@ -1,11 +1,11 @@
 <section>
     <div class="left">
-        <span class="title">Contact me</span>
-        <h2 class="title-work-together">Let's work <br> together</h2>
-        <span class="sub-title">Got a problem to solve?</span>
-        <p class="description">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.
+        <span class="title">{{'CONTACT_ME'| translate }}</span>
+        <h2 class="title-work-together">{{'LETS_WORK'| translate }}<br>{{'TOGETHER'| translate }}</h2>
+        <span class="sub-title">{{'CONTACT_ME_SUBTITLE'| translate }}</span>
+        <p class="description">{{'CONTACT_ME_DESCRIPTION'| translate }}
 
-            Need a Frontend developer?<a href="">Let’s talk!</a></p>
+         <a href="">{{'CONTACT_ME_LETS_TALK'| translate }}</a></p>
         
 
 
@@ -16,16 +16,16 @@
         <div class="container">
             <form (ngSubmit)=" onSubmit(contactForm)" #contactForm="ngForm">
               <div class="line"></div>
-              <label for="name">What's your name?</label>
-              <input [(ngModel)]="contactData.name" type="text" id="fname" name="firstname" placeholder="Your name.." required="">
+              <label for="name">{{'CONTACT_ME_NAME'| translate }}</label>
+              <input [(ngModel)]="contactData.name" type="text" id="fname" name="firstname" placeholder="{{'PLACEHOLDER_NAME'| translate }}" required="">
                
               <div class="line"></div>
-              <label for="email">What's your email?</label>
-              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email.." required="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+              <label for="email">{{'CONTACT_ME_EMAIL'| translate }}</label>
+              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{'PLACEHOLDER_EMAIL'| translate }}" required="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                
               <div class="line"></div>
-              <label for="message">How can I help you?</label>
-              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something.." ></textarea>
+              <label for="message">{{'CONTACT_ME_MESSAGE'| translate }}</label>
+              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{'PLACEHOLDER_MESSAGE'| translate }}" ></textarea>
               @if(!message.valid && message.touched){
                 <span>Please enter a message</span>
               }
@@ -37,8 +37,10 @@
                   <input id="confirm" type="checkbox" />
                   <label for="confirm">
                     <span class="legal-text">
+                      {{'LEGAL_TEXT_PART1'| translate }}
                     I've read the
-                    <a href="privacy">privacy policy</a>
+                    <a href="privacy"> {{'PRIVACY_POLICY'| translate }}</a>
+                    {{'LEGAL_TEXT_PART2'| translate }}
                     and agree to the processing of my data as outlined.
                     </span>
                 </label>
@@ -48,7 +50,7 @@
                 
              
               <div class="center">
-                <button  type="submit" value="Submit">Say Hello ;)</button>
+                <button  type="submit" value="Submit">{{'SAY_HELLO'| translate }}</button>
               </div>
               <br><br><br>
             </form>

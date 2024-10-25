@@ -18,5 +18,33 @@
     "CONTACT_ME_BUTTON":"Schreiben Sie mir",
     "CHECK_MY_WORK":"Meine Projekte",
 
-    "SKILL_DESCRIPTION":"Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung vorne zu bleiben."
+    "TECNOLOGIES":"Technologien",
+    "SKILL_HEADER":"Fähig­keiten",
+    "SKILL_DESCRIPTION":"Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung vorne zu bleiben.",
+    "YOU_NEED":"Sie suchen",
+    "ANOTHER_SKILL":"andere Fähigkeiten?",
+    "CONTACT_INVITE":"Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
+    "SKILL_LETS_TALK":"Kontakt",
+
+    "FEATURED_PROJECTS":"Ausge­wählte Projekte",
+    "PORTFOLIO_DESCRIPTION":"Erkunden Sie einige meiner Arbeiten -  Sehen Sie meine Fähigkeiten in Aktion",
+
+    "FEEDBACK_HEADER":"Was meine Kollegen über mich sagen",
+
+    "CONTACT_ME":"Schreiben Sie mir",
+    "LETS_WORK":"Lassen Sie uns",
+    "TOGETHER":" zusammen­arbeiten",
+    "CONTACT_ME_SUBTITLE":"Haben Sie ein Problem zu lösen?",
+    "CONTACT_ME_DESCRIPTION":"Schreiben Sie mir gerne mit­hilfe dieses Formulars. Ich freue mich, von Ihnen zu hören, Ihre Ideen kennen zu lernen und mit meiner Arbeit zu Ihrem Projekt beizutragen.",
+    "CONTACT_ME_LETS_TALK":"Sprechen wir darüber!",
+    "CONTACT_ME_NAME":"Wie lautet Ihr Name?",
+    "CONTACT_ME_EMAIL":"Wie lautet Ihre E-Mail?",
+    "CONTACT_ME_MESSAGE":"Nachricht",
+    "LEGAL_TEXT_PART1":"Ich habe die",
+    "PRIVACY_POLICY":"Datenschutzerklärung",
+    "LEGAL_TEXT_PART2":"gelesen und erkläre mich mit der Verarbeitung meiner Daten einverstanden.",
+    "SAY_HELLO":"Sag Hallo ;)",
+    "PLACEHOLDER_NAME":"Your Name ...",
+    "PLACEHOLDER_EMAIL":"Your E-Mail ...",
+    "PLACEHOLDER_MESSAGE":"Your Message ..."
   }

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-feedback',
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule,TranslateModule]
 })
 export class FeedbackSliderComponent {
   feedbacks = [
