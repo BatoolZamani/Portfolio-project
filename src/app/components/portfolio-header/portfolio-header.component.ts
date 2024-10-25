@@ -24,4 +24,8 @@ export class PortfolioHeaderComponent {
   openMenu(){
     this.menuValue=!this.menuValue;
   }
+  closeMenu(){
+    this.menuValue=false;
+
+  }
 }

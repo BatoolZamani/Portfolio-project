@@ -75,13 +75,13 @@ a:hover::after {
     line-height: 19.2px;   
     gap: 10px;
     transition: background-color 0.3s, color 0.3s, font-weight 0.3s;
-    border-radius: 25px; 
+    border-radius: 10px; 
 }
 
 
 .en {
     font-weight: 700;
-    color: #3dcfb680;
+    // color: #3dcfb680;
     background-color: transparent;
 }
 
@@ -126,7 +126,7 @@ input:checked ~ div .de {
     -webkit-transition: .4s;
     transition: .4s;
     border: 1px solid #3dcfb6;
-    border-radius: 25px;
+    border-radius: 10px;
   }
   
 .slider:before {
@@ -139,7 +139,7 @@ bottom: 0px;
 background-color: #3dcfb6;
 -webkit-transition: .4s;
 transition: .4s;
-border-radius: 25px;
+border-radius: 10px;
 }
 
 input:checked + .slider {
@@ -157,11 +157,11 @@ transform: translateX(36px);
 } 
 
 .slider.round {
-border-radius: 34px;
+border-radius: 10px;
 }
 
 .slider.round:before {
-border-radius: 50%;
+border-radius: 10px;
 }
 
 
