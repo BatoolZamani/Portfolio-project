@@ -1,9 +1,9 @@
-<div class="modal-wrapper" id="modal">
+<div class="modal-wrapper" id="modal"  [class.open-project]="projectModalValue">
     <div class="modal">
         <div class="modal-body">
             <div class="left">
-                <div class="number">01</div>
-                <div class="projects-name">Join</div>
+                <div class="number">{{number}}</div>
+                <div class="projects-name">{{title}}</div>
                 <div class="title-question">What is this project about?</div>
                 <div class="description">This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.</div>
                 <div class="skills">
@@ -22,8 +22,8 @@
                 </div>
             </div>
             <div class="right">
-                <div class="close" ><img src="assets/img/closeButton.svg" alt=""></div>
-                <img src="assets/img/joinscreen.png" alt="">
+                <div class="close" ><img src="assets/img/closeButton.svg" alt="" (click)="toggleMenu()"></div>
+                <img  src="{{imageUrl}}" alt="">
                 <div class="next-project">Next Project <img src="assets/img/arrows.svg" alt=""></div>
             </div>
             

@@ -10,12 +10,13 @@
         <div class="description">
             {{'PORTFOLIO_DESCRIPTION'| translate }}            
         </div>
+       
         <div class="projects">
             @for (project of projects; track $index) {
                 <div class="project-container" id="{{project.id}}">
                     <div class="left">
                         <div class="title-container">
-                            <span>{{project.title}}</span>
+                            <span (click)="openProject($index,project.title,project.imageurl)">{{project.title}}</span>
                             <div><img src="assets/img/arrow_outward.png" alt=""></div>
                             
                         </div>
@@ -37,6 +38,7 @@
                         </div>
                     </div>
                 </div>
+          
             }
         </div>
     </div>
@@ -44,3 +46,4 @@
    
     
 </section>
+<app-project-modal [number]="number" [title]="title" [imageUrl]="imageUrl" [projectModalValue]="modalOpen" (toggle)="toggleModal()"></app-project-modal>

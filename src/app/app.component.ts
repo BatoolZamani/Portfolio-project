@@ -31,7 +31,6 @@ import { TranslateModule } from '@ngx-translate/core';
     ProjectsComponentComponent,
     MarqueeComponent,
     FeedbackSliderComponent,
-    ProjectModalComponent,
     ContactMeComponent,
     FooterComponent,
     // ngx-translate Imports
