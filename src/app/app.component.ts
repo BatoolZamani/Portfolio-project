@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { PortfolioHeaderComponent } from "./components/portfolio-header/portfolio-header.component";
 import { IntroductionComponent } from "./components/introduction/introduction.component";
 import { AboutMeComponentComponent } from "./components/about-me-component/about-me-component.component";
@@ -16,26 +16,21 @@ import { FooterComponent } from './components/footer/footer.component';
 // Für ngx-translate
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { MainComponent } from './components/main/main.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    MainComponent,
     CommonModule,
     RouterOutlet,
-    PortfolioHeaderComponent,
-    IntroductionComponent,
-    AboutMeComponentComponent,
-    BoxContentComponent,
-    SkillsComponentComponent,
-    ProjectsComponentComponent,
-    MarqueeComponent,
-    FeedbackSliderComponent,
-    ContactMeComponent,
-    FooterComponent,
     // ngx-translate Imports
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
+    RouterModule,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
