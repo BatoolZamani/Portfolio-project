@@ -15,6 +15,7 @@ export class ProjectModalComponent {
   @Input() title:string='';
   @Input() imageUrl:string='';
   @Input() skills: string[] = [];
+  @Input() description:string='';
   
 
   toggleMenu() {

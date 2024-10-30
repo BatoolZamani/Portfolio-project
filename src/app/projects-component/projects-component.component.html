@@ -16,7 +16,7 @@
                 <div class="project-container" id="{{project.id}}">
                     <div class="left">
                         <div class="title-container">
-                            <span (click)="openProject($index,project.title,project.imageurl,project.skills)">{{project.title}}</span>
+                            <span (click)="openProject($index,project.title,project.imageurl,project.skills,project.description)">{{project.title}}</span>
                             <div><img src="assets/img/arrow_outward.png" alt=""></div>
                             
                         </div>
@@ -46,4 +46,4 @@
    
     
 </section>
-<app-project-modal [number]="number" [title]="title" [imageUrl]="imageUrl" [projectModalValue]="modalOpen" [skills]="skills" (toggle)="toggleModal()"></app-project-modal>
+<app-project-modal [number]="number" [title]="title" [imageUrl]="imageUrl" [projectModalValue]="modalOpen" [skills]="skills" [description]="description" (toggle)="toggleModal()"></app-project-modal>
