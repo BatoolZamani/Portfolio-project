@@ -14,10 +14,12 @@ export class ProjectModalComponent {
   @Input() number:Number=0;
   @Input() title:string='';
   @Input() imageUrl:string='';
+  @Input() skills: string[] = [];
+  
 
   toggleMenu() {
     this.projectModalValue = !this.projectModalValue;
-    this.toggle.emit(this.projectModalValue); // Emit the new value to the parent
+    this.toggle.emit(this.projectModalValue); 
     console.log("child modalOpen is",this.projectModalValue);
   }
   

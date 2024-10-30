@@ -14,6 +14,7 @@ export class ProjectsComponentComponent {
   number:Number=0;
   title:string='';
   imageUrl:string='';
+  skills: string[] = [];
 
   projects: { id:string; imageurl:string; title: string; skills: string[] }[] = [
     { id: 'join', title: 'Join',imageurl:'assets/img/join-project.png',skills: ['JavaScript', 'Firebase', 'HTML','CSS'] },
@@ -22,10 +23,11 @@ export class ProjectsComponentComponent {
   ];
   
 
-  openProject(index:number,title:string,imageUrl:string){
+  openProject(index:number,title:string,imageUrl:string,skills:string[]){
     this.number=index+1;
     this.title=title;
     this.imageUrl=imageUrl;
+    this.skills =skills;
     this.modalOpen=!this.modalOpen;
     console.log("parent modalOpen is",this.modalOpen);
   }

@@ -1,36 +1,58 @@
-<div class="modal-wrapper" id="modal"  [class.open-project]="projectModalValue">
+<div class="modal-wrapper" id="modal" [class.open-project]="projectModalValue">
     <div class="modal">
         <div class="modal-body">
             <div class="left">
-                <div class="number">{{number}}</div>
-                <div class="projects-name">{{title}}</div>
+                <div class="number">{{ number }}</div>
+                <div class="projects-name">{{ title }}</div>
                 <div class="title-question">What is this project about?</div>
-                <div class="description">This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.</div>
-                <div class="skills">
-                    <img src="assets/img/Iconsjs.svg" alt="">
-                    <span>JavaScript</span>
-
-                    <img src="assets/img/Iconshtml5.svg" alt="">
-                    <span>HTML</span>
-
-                    <img src="assets/img/Icons-css.svg" alt="">
-                    <span>CSS</span>
+                <div class="description">
+                    This App is a Slack Clone App. It revolutionizes team communication and collaboration with its
+                    intuitive interface, real-time messaging, and robust channel organization.
                 </div>
+
+               
+                <div class="skills">
+                    @for (skill of skills; track $index) {
+                        <div class="skill-item">
+                            @switch (skill) {
+                                @case ('HTML') {
+                                    <img src="assets/img/Iconshtml5.svg" alt="HTML">
+                                }
+                                @case ('CSS') {
+                                    <img src="assets/img/Icons-css.svg" alt="CSS">
+                                }
+                                @case ('Firebase') {
+                                    <img src="assets/img/Firebase.svg" alt="Firebase">
+                                }
+                                @case ('ReST-API') {
+                                    <img src="assets/img/REST-API.svg" alt="ReST API">
+                                }
+                                @case ('JavaScript') {
+                                    <img src="assets/img/Iconsjs.svg" alt="JavaScript">
+                                }
+
+                            }
+                           
+                            <span>{{ skill }}</span>
+                        </div>
+                    }
+                </div>
+
                 <div class="button-position">
                     <button><span>GitHub</span><img src="assets/img/arrow_outward.svg" alt=""></button>
                     <button><span>Live Test</span><img src="assets/img/arrow_outward.svg" alt=""></button>
                 </div>
             </div>
             <div class="right">
-                <div class="close" ><img src="assets/img/closeButton.svg" alt="" (click)="toggleMenu()"></div>
-                <img src="{{imageUrl}}" alt="" class="project-image"> 
-                <div class="next-project">Next Project <img src="assets/img/arrows.svg" alt=""></div>
+                <div class="close" (click)="toggleMenu()">
+                    <img src="assets/img/closeButton.svg" alt="">
+                </div>
+                <img src="{{ imageUrl }}" alt="" class="project-image">
+                <div class="next-project">
+                    Next Project <img src="assets/img/arrows.svg" alt="">
+                </div>
             </div>
-            
-           
         </div>
     </div>
-    <div class="modal-background" >
-
-    </div>
+    <div class="modal-background"></div>
 </div>
