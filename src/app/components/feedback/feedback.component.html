@@ -1,12 +1,12 @@
-<section class="feedback-slider">
+ <section class="feedback-slider">
   <div class="header-title">
     {{'FEEDBACK_HEADER'| translate }}
     What my colleagues say about me
   </div>
 
   <div class="slider-container" #sliderContainer>
-    <div class="slider">
-      <!-- Loop through feedbacks to create slides -->
+    <div class="slider"  (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">>
+     
       <div 
         *ngFor="let feedback of feedbacks; let i = index" 
         class="slide"
@@ -31,7 +31,7 @@
       <img src="assets/img/Arrow-back.svg" alt="Back Arrow">
     </button>
 
-    <!-- Dots for each slide -->
+   
     <span
       *ngFor="let feedback of feedbacks; let i = index"
       class="dot"
@@ -43,4 +43,5 @@
       <img src="assets/img/Arrow-forward.svg" alt="Forward Arrow">
     </button>
   </div>
-</section>
+</section> 
+

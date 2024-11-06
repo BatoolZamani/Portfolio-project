@@ -17,6 +17,8 @@ export class FeedbackSliderComponent {
   ];
 
   currentSlide = 0;
+  private startX = 0;
+  private threshold = 50;
 
   // Go to the next slide, wrapping around when necessary
   nextSlide(): void {
@@ -47,4 +49,18 @@ export class FeedbackSliderComponent {
   isNext(index: number): boolean {
     return (this.currentSlide + 1) % this.feedbacks.length === index;
   }
+  
+  onTouchStart(event: any): void {
+    this.startX = event.touches[0].clientX;
+  }
+  
+  onTouchEnd(event: any): void {
+    const deltaX = event.changedTouches[0].clientX - this.startX;
+    if (deltaX > this.threshold) {
+      this.prevSlide();
+    } else if (deltaX < -this.threshold) {
+      this.nextSlide();
+    }
+  }
 }
+
