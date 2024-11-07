@@ -1,59 +1,57 @@
 <section>
     <div class="left">
-        <span class="title" id="contactMeScroll">{{'CONTACT_ME'| translate }}</span>
-        <h2 class="title-work-together">{{'LETS_WORK'| translate }}<br>{{'TOGETHER'| translate }}</h2>
-        <span class="sub-title">{{'CONTACT_ME_SUBTITLE'| translate }}</span>
-        <p class="description">{{'CONTACT_ME_DESCRIPTION'| translate }}
-
-         <a href="">{{'CONTACT_ME_LETS_TALK'| translate }}</a></p>
-        
-
-
-
+      <span class="title" id="contactMeScroll">{{ 'CONTACT_ME' | translate }}</span>
+      <h2 class="title-work-together">{{ 'LETS_WORK' | translate }}<br>{{ 'TOGETHER' | translate }}</h2>
+      <span class="sub-title">{{ 'CONTACT_ME_SUBTITLE' | translate }}</span>
+      <p class="description">{{ 'CONTACT_ME_DESCRIPTION' | translate }}
+        <a href="">{{ 'CONTACT_ME_LETS_TALK' | translate }}</a>
+      </p>
     </div>
     <div class="right">
-        
-        <div class="container">
-            <form (ngSubmit)=" onSubmit(contactForm)" #contactForm="ngForm">
-              <div class="line"></div>
-              <label for="name">{{'CONTACT_ME_NAME'| translate }}</label>
-              <input [(ngModel)]="contactData.name" type="text" id="fname" name="firstname" placeholder="{{'PLACEHOLDER_NAME'| translate }}" required="">
-               
-              <div class="line"></div>
-              <label for="email">{{'CONTACT_ME_EMAIL'| translate }}</label>
-              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{'PLACEHOLDER_EMAIL'| translate }}" required="" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-               
-              <div class="line"></div>
-              <label for="message">{{'CONTACT_ME_MESSAGE'| translate }}</label>
-              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{'PLACEHOLDER_MESSAGE'| translate }}" ></textarea>
-              @if(!message.valid && message.touched){
-                <span>Please enter a message</span>
-              }
-              <div class="line last-line"></div>
-             
-               
-                <div class="custom-checkbox">
-                  
-                  <input id="confirm" type="checkbox" />
-                  <label for="confirm">
-                    <span class="legal-text">
-                      {{'LEGAL_TEXT_PART1'| translate }}
-                    I've read the
-                    <a href="privacy"> {{'PRIVACY_POLICY'| translate }}</a>
-                    {{'LEGAL_TEXT_PART2'| translate }}
-                    and agree to the processing of my data as outlined.
-                    </span>
-                </label>
-              </div>
-              
-              
-                
-             
-              <div class="center">
-                <button  type="submit" value="Submit">{{'SAY_HELLO'| translate }}</button>
-              </div>
-              <br><br><br>
-            </form>
+      <div class="container">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <div class="line"></div>
+          <label for="name">{{ 'CONTACT_ME_NAME' | translate }}</label>
+          <input formControlName="firstname" type="text" id="fname" placeholder="{{ 'PLACEHOLDER_NAME' | translate }}" required>
+          <div class="text-danger" *ngIf="userForm.controls['firstname'].invalid && (userForm.controls['firstname'].touched || isFormSubmitted)">
+            <span *ngIf="userForm.controls['firstname'].errors?.['required']">This Is Required</span>
           </div>
+  
+          <div class="line"></div>
+          <label for="email">{{ 'CONTACT_ME_EMAIL' | translate }}</label>
+          <input formControlName="email" type="email" id="email" placeholder="{{ 'PLACEHOLDER_EMAIL' | translate }}" required>
+          <div class="text-danger" *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].touched || isFormSubmitted)">
+            <span *ngIf="userForm.controls['email'].errors?.['required']">This Is Required</span>
+            <span *ngIf="userForm.controls['email'].errors?.['email']">Please enter a valid email</span>
+          </div>
+  
+          <div class="line"></div>
+          <label for="message">{{ 'CONTACT_ME_MESSAGE' | translate }}</label>
+          <textarea formControlName="message" id="message" placeholder="{{ 'PLACEHOLDER_MESSAGE' | translate }}" minlength="4"></textarea>
+          <div class="text-danger-message" *ngIf="userForm.controls['message'].invalid && (userForm.controls['message'].touched || isFormSubmitted)">
+            <span *ngIf="userForm.controls['message'].errors?.['required']">This Is Required</span>
+            <span *ngIf="userForm.controls['message'].errors?.['minlength']">Please enter a message with a minimum of 4 letters</span>
+          </div>
+  
+          <div class="line last-line"></div>
+          <div class="custom-checkbox">
+            <input id="confirm" type="checkbox" formControlName="isAgree" />
+            <label for="confirm">
+              <span class="legal-text">
+                {{ 'LEGAL_TEXT_PART1' | translate }} I've read the
+                <a href="privacy">{{ 'PRIVACY_POLICY' | translate }}</a>
+                {{ 'LEGAL_TEXT_PART2' | translate }} and agree to the processing of my data as outlined.
+              </span>
+            </label>
+          </div>
+          <div class="text-danger-privacy-policy" *ngIf="userForm.get('isAgree')?.invalid && isFormSubmitted">
+            You must accept the privacy policy.
+          </div>
+  
+          <div class="center">
+            <button type="submit" >{{ 'SAY_HELLO' | translate }}</button>
+        </div>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
