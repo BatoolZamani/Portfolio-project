@@ -1,19 +1,22 @@
- <section class="feedback-slider">
+<section class="feedback-slider">
   <div class="header-title">
-    {{'FEEDBACK_HEADER'| translate }}
+    {{ 'FEEDBACK_HEADER' | translate }}
     What my colleagues say about me
   </div>
 
   <div class="slider-container" #sliderContainer>
-    <div class="slider"  (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">>
-     
-      <div 
-        *ngFor="let feedback of feedbacks; let i = index" 
+    <div
+      class="slider"
+      (touchstart)="onTouchStart($event)"
+      (touchend)="onTouchEnd($event)"
+    >
+      <div
+        *ngFor="let feedback of feedbacks; let i = index"
         class="slide"
         [ngClass]="{
-          'active': isActive(i),
-          'prev': isPrev(i),
-          'next': isNext(i)
+          active: isActive(i),
+          prev: isPrev(i),
+          next: isNext(i)
         }"
       >
         <div class="feedback-text">
@@ -28,20 +31,18 @@
 
   <div class="dots">
     <button class="arrow left-arrow" (click)="prevSlide()">
-      <img src="assets/img/Arrow-back.svg" alt="Back Arrow">
+      <img src="assets/img/Arrow-back.svg" alt="Back Arrow" />
     </button>
 
-   
     <span
       *ngFor="let feedback of feedbacks; let i = index"
       class="dot"
-      [ngClass]="{ 'active': currentSlide === i }"
+      [ngClass]="{ active: currentSlide === i }"
       (click)="goToSlide(i)"
     ></span>
 
     <button class="arrow right-arrow" (click)="nextSlide()">
-      <img src="assets/img/Arrow-forward.svg" alt="Forward Arrow">
+      <img src="assets/img/Arrow-forward.svg" alt="Forward Arrow" />
     </button>
   </div>
-</section> 
-
+</section>

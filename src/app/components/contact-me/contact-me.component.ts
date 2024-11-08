@@ -25,7 +25,7 @@ export class ContactMeComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://batoolzamani.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
