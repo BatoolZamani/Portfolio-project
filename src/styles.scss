@@ -1,27 +1,37 @@
 $green:#3DCFB6;
+
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html {
     scroll-behavior: smooth;
 }
 body {
-    max-width: 1920px;
+    max-width: 1920px; /* Maximale Breite, damit kein horizontales Scrollen entsteht */
+    width: 100%;
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-   
-    
+    margin: 0 auto; /* Zentriert den Inhalt auf dem Bildschirm */
     background-color: #292929;
     font-family: 'Fira', sans-serif;
-    // overflow-x: hidden; 
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
   }
   button:disabled {
     border-color: #ffffff80;
     color: #ffffff80;
     cursor: default
 }
-  .button-position {
+ /* Button-Position Container */
+.button-position {
     display: flex;
     flex-direction: row;
     gap: 48px;
+    flex-wrap: wrap; /* Passt die Buttons an kleinere Bildschirme an */
 
     button {
         border: 1px solid white;
