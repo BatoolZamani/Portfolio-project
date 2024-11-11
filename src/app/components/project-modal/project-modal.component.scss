@@ -66,14 +66,15 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     width: 80%;
-    // height: 70vh;
     background: linear-gradient(275deg, #002920, #001310);
     margin: 40px;
     border-radius: 30px;
     gap: 40px;
     border: 1px solid #3dcfb6;
     max-width: 100%;
-    max-height: 100vh;
+    max-height: 80vh;
+    overflow: auto; 
+  
   
   .left {
     width: 40%;

@@ -13,10 +13,10 @@
        
         <div class="projects">
             @for (project of projects; track $index) {
-                <div class="project-container" id="{{project.id}}">
+                <div class="project-container" (click)="openProject($index,project.title,project.imageurl,project.skills,project.description)" id="{{project.id}}">
                     <div class="left">
                         <div class="title-container">
-                            <span (click)="openProject($index,project.title,project.imageurl,project.skills,project.description)">{{project.title}}</span>
+                            <span >{{project.title}}</span>
                             <div><img src="assets/img/arrow_outward.png" alt=""></div>
                             
                         </div>
