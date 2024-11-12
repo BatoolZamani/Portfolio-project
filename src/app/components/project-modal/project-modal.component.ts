@@ -11,18 +11,22 @@ export class ProjectModalComponent {
   @Input() projectModalValue:boolean=false;
   @Output() toggle = new EventEmitter<boolean>();
 
-  @Input() number:Number=0;
+  @Input() number:number=0;
   @Input() title:string='';
   @Input() imageUrl:string='';
   @Input() skills: string[] = [];
   @Input() description:string='';
   
+  @Input() nextProject?: Function;
 
   toggleMenu() {
     this.projectModalValue = !this.projectModalValue;
     this.toggle.emit(this.projectModalValue); 
-    console.log("child modalOpen is",this.projectModalValue);
   }
-  
+  onNextProjectClick() {
+    if (this.nextProject) {
+      this.nextProject();
+    }
+  }
 
 }

@@ -5,7 +5,6 @@
         </div>
         <div class="header-title">
             {{'FEATURED_PROJECTS'| translate }}
-            Featured Projects
         </div>
         <div class="description">
             {{'PORTFOLIO_DESCRIPTION'| translate }}            
@@ -46,4 +45,13 @@
    
     
 </section>
-<app-project-modal [number]="number" [title]="title" [imageUrl]="imageUrl" [projectModalValue]="modalOpen" [skills]="skills" [description]="description" (toggle)="toggleModal()"></app-project-modal>
+<app-project-modal 
+  [number]="number" 
+  [title]="title" 
+  [imageUrl]="imageUrl" 
+  [projectModalValue]="modalOpen" 
+  [skills]="skills" 
+  [description]="description"  
+  [nextProject]="nextProject" 
+  (toggle)="toggleModal()">
+</app-project-modal>
