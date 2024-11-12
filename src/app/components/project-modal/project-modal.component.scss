@@ -4,228 +4,200 @@ body {
   background-color: #292929;
   font-family: 'Fira', sans-serif;
 }
-.modal-wrapper{
-    display: none;
+
+.modal-wrapper {
+  display: none;
 }
-.modal-wrapper.open-project{
+
+.modal-wrapper.open-project {
   display: flex;
 }
-.button-position {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-
-  button {
-    border: 1px solid white;
-    background-color: transparent;
-    border-radius: 50px;
-    color: white;
-    font-family: 'Karla', monospace;
-    font-size: 18px;
-    padding: 15px;
-    height: 48px;
-    position: relative;
-    // overflow: hidden;
-
-    span {
-      display: inline-block;
-      position: relative;
-      transform: none;
-    }
-
-    &:hover span {
-      transform: none;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-
 
 .modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.modal-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+  background: linear-gradient(275deg, #002920, #001310);
+  margin: 40px;
+  border-radius: 30px;
+  gap: 40px;
+  border: 1px solid #3DCFB6;
+  max-width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  position: relative;
+}
 
-  .modal-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 80%;
-    background: linear-gradient(275deg, #002920, #001310);
-    margin: 40px;
-    border-radius: 30px;
-    gap: 40px;
-    border: 1px solid #3dcfb6;
-    max-width: 100%;
-    max-height: 80vh;
-    overflow: auto; 
-  
-  
-  .left {
-    width: 40%;
-    margin-bottom: 30px;
+/* Scrollbar Styling */
+.modal-body::-webkit-scrollbar {
+  width: 12px;
+}
 
-    .number {
-      color: #3dcfb6;
-      font-size: 128px;
-      font-weight: 700;
-    }
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 30px;
+  margin: 10px;
+}
 
-    .projects-name {
-      color: white;
-      font-size: 64px;
-      font-family: 'Fira', sans-serif;
-      padding-top: 20px;
-    }
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: #3DCFB6;
+  border-radius: 50px;
+  border: 3px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
 
-    .title-question {
-      font-size: 24px;
-      color: #3dcfb6;
-      font-family: 'Fira', sans-serif;
-      font-weight: 700;
-      padding-top: 20px;
-    }
+.modal-body::-webkit-scrollbar-button {
+  display: none;
+}
 
-    .description {
-      font-size: 18px;
-      color: white;
-      font-weight: 400;
-      font-family: 'Karla', monospace;
-      padding-top: 20px;
-      text-align: justify;
-    }
+.left {
+  width: 40%;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
 
-    .skills {
-      padding-top: 34px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      color: white;
-      padding-top: 30px;
+.number {
+  color: #3DCFB6;
+  font-size: 128px;
+  font-weight: 700;
+}
 
-      span {
-        display: inline-block;
-        position: relative;
-        transform: none; 
-        padding-right: 10px;
-        padding-left: 10px;
-       
-      }
+.projects-name {
+  color: white;
+  font-size: 64px;
+  font-family: 'Fira', sans-serif;
+  padding-top: 20px;
+}
 
-     
-    }
+.title-question {
+  font-size: 24px;
+  color: #3DCFB6;
+  font-family: 'Fira', sans-serif;
+  font-weight: 700;
+  padding-top: 20px;
+}
 
-    .button-position {
-      padding-top: 40px;
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-    }
+.description {
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  font-family: 'Karla', monospace;
+  padding-top: 20px;
+  text-align: justify;
+}
 
-    button {
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-      border: 1px solid white;
-      background-color: transparent;
-      color: white;
-      cursor: pointer;
-    }
+.skills {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+}
 
-    button img {
-      margin-left: 10px;
-      width: 16px;
-      height: 16px;
-    }
+.skills span {
+  display: inline-block;
+  padding: 5px 10px;
+}
 
-    button:hover {
-      border: 1px solid #3dcfb6;
-      color: #3DCFB6;
-      img {
-        margin-left: 10px;
-        width: 16px;
-        height: 16px;
-        transition: transform 0.3s ease; /* Smooth transition */
-      }
-  
-      &:hover img {
-        transform: translate(3px, -3px); 
-      }
-      
-    }
-  
-   
-  }
+.button-position {
+  padding-top: 40px;
+  display: flex;
+  gap: 20px;
+}
 
-  .right {
-    
-    width: 40%;
-    margin-top: 30px;
-     
-     img {
-      width: 100%; 
-      height: auto;
-      object-fit: contain;
-      border-radius: 20px;
-      transition: transform 0.2s ease, filter 0.3s ease;
-    
-  }
-    .close{
-        display: flex;
-        justify-content: right;
-        padding-bottom: 40px;
-        cursor: pointer;
-       
-            img {
-                width: 48px;
-                height: 48px;
-                transition: transform 0.2s ease, filter 0.3s ease; 
-               
-              }
-              
-              &:hover img {
-                transform: scale(1.2); 
-                filter: invert(66%) sepia(15%) saturate(1534%) hue-rotate(120deg) brightness(101%) contrast(94%);
-              }
-             
-    }
-  
-    .next-project{
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        padding-top: 40px;
-        color: #3dcfb6;
-        &:hover  {
-           cursor: pointer;
-           color: white;
-           
-          } 
-          img{
-            width: 48px;
-            height: 48px;
-          }
-        &:hover img {
-            transform: translate(3px);
-           
-          } 
-    }
-  }
+button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+button img {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+}
+
+button:hover {
+  border-color: #3DCFB6;
+  color: #3DCFB6;
+}
+
+button:hover img {
+  transform: translate(3px, -3px);
+  transition: transform 0.3s ease;
+}
+
+.right {
+  width: 40%;
+}
+
+.right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.close {
+  position: fixed;
+  top: 20px; /* Feste Position von oben */
+  right: 20px; /* Feste Position von rechts */
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.close:hover img {
+  transform: scale(1.2);
+  filter: invert(66%) sepia(15%) saturate(1534%) hue-rotate(120deg) brightness(101%) contrast(94%);
+}
+
+.next-project {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 40px;
+  color: #3DCFB6;
+  cursor: pointer;
+}
+
+.next-project:hover {
+  color: white;
+}
+
+.next-project img {
+  width: 48px;
+  height: 48px;
+}
+
+.next-project:hover img {
+  transform: translate(3px);
 }
 
 .modal-background {
@@ -238,18 +210,36 @@ body {
   opacity: 0.75;
   z-index: 900;
 }
+
 @media (max-width: 1300px) {
-  .modal-body{
-    flex-direction:column-reverse;
-   
+  .modal-body {
+    flex-direction: column-reverse;
+  }
+  .close {
+    top: 20px; /* Passt sich automatisch an kleinere Bildschirmgrößen an */
+    right: 20px; /* Abstand von rechts bleibt gleich */
   }
 
- .modal-body .right {
-  margin-top: 30px;
-  width: 80%;
+  .modal-body .right {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .modal-body .left {
+    margin-bottom: 30px;
+    width: 80%;
+  }
 }
-.modal-body .left {
-  margin-bottom: 30px;
-  width: 80%;
+@media (max-width: 1024px) {
+  .close {
+    top: 10px; /* Weniger Abstand von oben auf kleineren Bildschirmen */
+    right: 10px;
+  }
 }
+
+@media (max-width: 768px) {
+  .close {
+    top: 5px;
+    right: 5px;
+  }
 }
