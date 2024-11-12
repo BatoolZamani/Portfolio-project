@@ -17,25 +17,55 @@ export class ProjectsComponentComponent {
   description:string='';
   skills: string[] = [];
   currentIndex: number = 0;
+ 
 
-  projects: { id:string; imageurl:string; title: string; skills: string[];description:string }[];
-
-  constructor(){
-    this.projects= [
-      { id: 'join', title: 'Join',imageurl:'assets/img/join-project.png',description:'A Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',skills: ['JavaScript', 'Firebase', 'HTML','CSS'] },
-      { id: 'WizardManGame', title: 'Wizard Man Game',imageurl:'assets/img/wizard-man-project.png',description:'Join Wizard Man on a thrilling adventure to collect coins and magical potions, gaining strength to battle fierce monsters.', skills: ['JavaScript','CSS','HTML'] },
-      { id: 'POKEMON', title: 'POKEMON',imageurl:'assets/img/pokedex-project.png',description:'Based on a PokéAPI a simple library that provides and catalogues Pokemon information.', skills: ['JavaScript','ReST-API','HTML','CSS'] }
+  projects: { 
+    id: string; 
+    imageurl: string; 
+    title: string; 
+    skills: string[]; 
+    description: string;
+    githubLink: string; 
+  }[];
+  
+  constructor() {
+    this.projects = [
+      {
+        id: 'join', 
+        title: 'Join', 
+        imageurl: 'assets/img/join-project.png', 
+        description: 'A Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.', 
+        skills: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
+        githubLink: 'https://github.com/BatoolZamani/Join-dummy' 
+      },
+      {
+        id: 'WizardManGame', 
+        title: 'Wizard Man Game', 
+        imageurl: 'assets/img/wizard-man-project.png', 
+        description: 'Join Wizard Man on a thrilling adventure to collect coins and magical potions, gaining strength to battle fierce monsters.', 
+        skills: ['JavaScript', 'CSS', 'HTML'],
+        githubLink: 'https://github.com/BatoolZamani/Wizard-Man-Game' 
+      },
+      {
+        id: 'POKEMON', 
+        title: 'Pokedex', 
+        imageurl: 'assets/img/pokedex-project.png', 
+        description: 'Based on a PokéAPI a simple library that provides and catalogues Pokemon information.', 
+        skills: ['JavaScript', 'ReST-API', 'HTML', 'CSS'],
+        githubLink: 'https://github.com/BatoolZamani/PokemonProject' 
+      }
     ];
   }
   
-
-  openProject(index:number,title:string,imageUrl:string,skills:string[],description:string){
+  githubLink: string = '';
+  openProject(index:number,title:string,imageUrl:string,skills:string[],description:string, githubLink: string){
     this.currentIndex = index;
     this.number=index+1;
     this.title=title;
     this.imageUrl=imageUrl;
     this.skills =skills;
     this.description=description;
+    this.githubLink = githubLink;
     if(!this.modalOpen)
       this.modalOpen=!this.modalOpen;
   }
@@ -56,7 +86,8 @@ export class ProjectsComponentComponent {
         nextProject.title,
         nextProject.imageurl,
         nextProject.skills,
-        nextProject.description
+        nextProject.description,
+        nextProject.githubLink
       );
     } else {
       console.error("Projects array is undefined or empty!", this.projects);
