@@ -18,6 +18,7 @@ export class ProjectModalComponent {
   @Input() skills: string[] = [];
   @Input() description: string = '';
   @Input() githubLink: string = '';
+  @Input() liveTestLink: string = '';
 
   @Input() nextProject?: Function;
 

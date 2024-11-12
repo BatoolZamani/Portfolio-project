@@ -42,7 +42,10 @@
                         <span>GitHub</span>
                         <img src="assets/img/arrow_outward.svg" alt="">
                       </button>
-                    <button><span>Live Test</span><img src="assets/img/arrow_outward.svg" alt=""></button>
+                      <button *ngIf="liveTestLink" (click)="openExternalLink(liveTestLink)">
+                        <span>Live Test</span>
+                        <img src="assets/img/arrow_outward.svg" alt="">
+                      </button>
                 </div>
             </div>
             <div class="right">

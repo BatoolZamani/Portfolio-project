@@ -14,7 +14,7 @@
             @for (project of projects; track $index) {
               <div 
                 class="project-container" 
-                (click)="openProject($index, project.title, project.imageurl, project.skills, project.description, project.githubLink)" 
+                (click)="openProject($index, project.title, project.imageurl, project.skills, project.description, project.githubLink,project.liveTestLink)" 
                 id="{{project.id}}">
                 <div class="left">
                   <div class="title-container">
@@ -48,6 +48,7 @@
   [skills]="skills" 
   [description]="description" 
   [githubLink]="githubLink" 
+  [liveTestLink]="liveTestLink"
   [nextProject]="nextProject" 
   (toggle)="toggleModal()">
 </app-project-modal>
