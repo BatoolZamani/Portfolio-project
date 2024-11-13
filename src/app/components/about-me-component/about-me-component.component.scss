@@ -1,10 +1,14 @@
-
+*{
+    border: 1px red solid;
+}
 section {
     display: flex;
     flex-direction: row;
     width: 100%;
     // height: 100vh;
     margin-bottom: 100px;
+    padding-left: 96px;
+    padding-right: 96px;
     
 }
 
@@ -13,7 +17,8 @@ section {
     width: 50%;    
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
+    padding-left: 46px;
     
     
 }
@@ -25,6 +30,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 20px;
+    
 }
 
 .left-side .back-line {

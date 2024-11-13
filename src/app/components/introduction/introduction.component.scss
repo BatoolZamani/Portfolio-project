@@ -10,32 +10,35 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+  overflow-x: hidden; 
   font-family: 'Karla', sans-serif;
   height: 100%;
-
+ 
 }
 
-/* Allgemeine Stile */
+
 body {
   max-width: 1920px;
   
   margin-left: auto;
   margin-right: auto;
-  background-color: #292929;
+  background-color: #1c1c1c;
+  padding-left: 76px;
+    padding-right: 76px;
 }
 
 /* Hauptinhalt */
 .main-content {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(45deg, #1c1c1c, #08463b);
+  background-image: linear-gradient(to top right, #1c1c1c 0%, #08463b 100%);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%; /* Stellt sicher, dass der Hintergrund die gesamte Breite und Höhe abdeckt */
   background-position: center;
+  // background-size: cover;
   color: #fff;
   width: 100%;
-  min-height: 100vh; /* Verhindert vertikales Scrollen */
+  min-height: 100vh;
 }
 
 .content {
@@ -43,6 +46,7 @@ body {
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Linke Seite */
