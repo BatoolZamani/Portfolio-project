@@ -59,7 +59,7 @@ section{
                         display: block;
                     }
 
-                    #join-project{
+                    .each-project{
                         display: block;
                     }
                 }
@@ -165,7 +165,7 @@ section{
            
         }
     }
-    #join-project{
+    .each-project{
         display: none;
     }
     @media (max-width: 900px) {
