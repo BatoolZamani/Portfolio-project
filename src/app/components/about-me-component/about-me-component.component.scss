@@ -87,6 +87,7 @@ section {
             position: relative;
             transform: translateY(0);
             padding-left: 24px;
+            text-align: justify;
         }
         &:hover span {
             transform: translateY(-3px);
@@ -103,32 +104,36 @@ section {
         
     }
 }
-@media (max-width:900px) {
+@media (max-width: 900px) {
     section {
-      
         flex-direction: column;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    section .description  {
         
-      
+        padding-left: 0px; 
+        padding-right: 0px; 
         
     }
     .left-side {
-       
-        width: 94%;  
-        margin-left: 20px;
-        margin-right: 20px;  
-       
-        
-        
+        width: 100%;
+        padding: 0 ;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .my-image-container {
+        width: 80%;
+    }
+    .left-side img:not(.back-line) {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
     }
     .right-seide {
         width: 100%;
         padding-top: 42px;
-        
-    }
-    .my-image-container {
-        
-        width: 50%;
-        
     }
 }
 

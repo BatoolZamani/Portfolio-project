@@ -27,7 +27,7 @@ section{
         color: $green;
         font-size: 64px;
         font-weight: 700;
-        font-family: 'Fira', sans-serif;
+        font-family: 'Fira Code', monospace;
     }
     .description{
         font-size: 18px;
@@ -53,11 +53,15 @@ section{
       
         
     }
+    section .description  {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     .title-box{
         font-size: 24px;
         color:$green;
         padding-bottom: 20px;
-        padding-left: 42px;
+        padding-left: 0px;
     }
 }
 

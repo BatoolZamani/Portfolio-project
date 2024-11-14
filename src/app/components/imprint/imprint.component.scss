@@ -1,12 +1,14 @@
 html, body {
     height: 100%;
     margin: 0; 
+  
 }
 
 .page-container {
     display: flex;
     flex-direction: column;
     min-height: 98vh; 
+   
 }
 
 .main-content {
@@ -14,6 +16,10 @@ html, body {
     color: white;
     max-width: 1920px;
     padding-left: 5%;
+    padding-left: 96px;
+    padding-right: 96px;
+    text-align: justify;
+    line-height: 2;
     
 }
 

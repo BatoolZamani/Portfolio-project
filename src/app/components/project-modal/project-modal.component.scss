@@ -1,8 +1,10 @@
 $green: #3DCFB6;
-
+*{
+  border: 1px solid red;
+}
 body {
   background-color: #292929;
-  font-family: 'Fira', sans-serif;
+  font-family: 'Fira Code', monospace;
 }
 
 .modal-wrapper {
@@ -80,14 +82,14 @@ body {
 .projects-name {
   color: white;
   font-size: 64px;
-  font-family: 'Fira', sans-serif;
+  font-family: 'Fira Code', monospace;
   padding-top: 20px;
 }
 
 .title-question {
   font-size: 24px;
   color: #3DCFB6;
-  font-family: 'Fira', sans-serif;
+  font-family: 'Fira Code', monospace;
   font-weight: 700;
   padding-top: 20px;
 }
@@ -229,6 +231,10 @@ button:hover img {
     margin-bottom: 30px;
     width: 80%;
   }
+  .left  {
+    
+    margin-left: 0px;
+}
 }
 @media (max-width: 1024px) {
   .close {
@@ -242,4 +248,11 @@ button:hover img {
     top: 5px;
     right: 5px;
   }
+}
+@media (max-width: 450px) {
+  .projects-name  {
+    
+    font-size: 34px;
+  }
+
 }

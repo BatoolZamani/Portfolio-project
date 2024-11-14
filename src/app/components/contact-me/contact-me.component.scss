@@ -1,4 +1,6 @@
-
+*{
+    border: 1px solid red;
+}
 section {
     width:100%;
     display: flex;
@@ -24,12 +26,12 @@ section .left .title {
 
 section .left .title-work-together {
     font-size: 64px;
-    font-family: 'Fira', sans-serif;
+    font-family: 'Fira Code', monospace;
 }
 
 section .left .sub-title {
     font-size: 24px;
-    font-family: 'Fira', sans-serif;
+    font-family: 'Fira Code', monospace;
     font-weight: 700;
 }
 
@@ -71,7 +73,7 @@ section .right .container form .last-line {
 
 /* Label and input styling */
 section .right .container form label{
-    font-family: Fira Code;
+    font-family: 'Fira Code', monospace;
     font-weight: 500;
     font-size: 24px;
     line-height: 18px;
@@ -177,8 +179,8 @@ section .right .container form .center{
 }
 
 [type="checkbox"] + label::before {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 5px;
     border: 2px solid #3DCFB6;
     background-color: #292929;
@@ -186,9 +188,10 @@ section .right .container form .center{
     content: "";
     float: left;
     margin-right: 0px;
-    margin-left: 32px;
+    /* margin-left: 32px; */
     z-index: 5;
     position: relative;
+    margin-top: 3px;
 }
 
 [type="checkbox"]:checked + label::before {

@@ -1,197 +1,163 @@
 
-section{
+section {
     display: flex;
     flex-direction: row;
-    padding-left: 136px;
-    padding-right: 5%;
-    .left-side{
-        width: 100%;
-        
-        .title-portfolio{
-            font-size:24px ;
-            font-weight: 700;
-            font-family: 'Karla', monospace;
-            color: #3DCFB6;
-        }
-        .header-title{
-            font-size:64px ;
-            font-weight: 700;
-            font-family: 'Fira', sans-serif;
-            color: #3DCFB6;
-            padding-top: 20px;
-        }
-        .description{
-            width: 68%;
-            font-size:18px ;
-            font-weight: 400;
-            font-family: 'Karla', monospace;
-            color: white;
-            padding-top: 41px;
-           
-            padding-bottom: 41px;
-        }
-        .projects{
-            position: relative;
-            width: 100%;
-            .project-container:first-child {
-                border-top: 1px solid #3DCFB6; /* Setzt die obere Grenze nur für das erste Kind */
-              }
-            .project-container {
-                display: flex;
-                flex-direction: row;
-                border-bottom: 1px solid #3DCFB6;
-                justify-content: space-between;
-                padding-left: 32px;
-                padding-right: 32px;
-                padding-top: 30px;
-                padding-bottom: 30px;
-                width: 60%;
-                height: 100px;
-               
-                &:hover {
-                    cursor: pointer; 
-                    transition: transform 0.2s ease-in-out;
-                    
-                   
-                    background-color: rgba(61, 207, 182, 0.1); 
-            
-                  
-                    .title-container img {
-                        display: block;
-                    }
+    padding: 0 5% 0 136px;
+}
 
-                    .each-project{
-                        opacity: 1; /* Neu hinzugefügt */
-                        transform: translateY(0); /* Neu hinzugefügt */
-                    }
-                }
-            
-                .title-container {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-            
-                    img {
-                        padding-left: 10px;
-                        padding-top: 10px;
-                        display: none; 
-                    }
-                }
-            
-                .divider{
-                    width: 1px;
-                    height: 20px;
-                    background-color: brown;
-                }
-                
-                .left{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    width: 100%;
-                }
+.left-side {
+    width: 100%;
+}
 
-                .right-side {
-                    width: 40%;
-                    position: absolute;
-                    right: 0px;
+.title-portfolio {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Karla', monospace;
+    color: #3DCFB6;
+}
 
-                
-                    .project-screen-container {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: relative;
-                        flex-direction: column;
-                        top: -50px;
-                
-                        img {
-                            width: 10%;
-                            height: auto;
-                        }
-                
-                      
-                        .back-line {
-                            z-index: 0;
-                            width: 18vw;
-                            height:auto;
-                            position: absolute;
-                            right: 130px; 
-                           
-                        }
-                
-                      
-                        .main-image {
-                            z-index: 1;
-                            width: 18vw;
-                            height: auto;
-                            border-radius: 30px;
-                            position: relative;
-                            top: 0;
-                            left: 20;
-                        }
-                    }
-                }
-                }
+.header-title {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: 'Fira Code', monospace;
+    color: #3DCFB6;
+    padding-top: 20px;
+}
 
-            }
-            .project-container{
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-            .project-container span{
-                display: flex;
-                font-family: "Fira", sans-serif;
-                font-size: 24px;
-                font-weight: 700;
-                color: white;
-                align-items: center;
-            }
-            .project-container ul {
-                display: flex;
-                align-items: end;
-                padding-left: 40px;
-                
-                
-            }
-            .project-container ul li{
-                display: flex;
-                align-items: end;
-                font-family: 'Karla', monospace;
-                font-size: 18px;
-                font-weight: 400;
-                color: white;
-                list-style-type:none;
-                
-            }
-           
-        }
+.description {
+    width: 68%;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Karla', monospace;
+    color: white;
+    padding: 41px 0;
+}
+
+.projects {
+    position: relative;
+    width: 100%;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 32px;
+    width: 60%;
+    height: 100px;
+    border-bottom: 1px solid #3DCFB6;
+    transition: background-color 0.2s ease-in-out;
+
+    &:first-child {
+        border-top: 1px solid #3DCFB6;
     }
-    .each-project{
-        opacity: 0; /* Neu hinzugefügt */
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(61, 207, 182, 0.1);
+    }
+    span{
+        display: flex;
+        font-family: 'Fira Code', monospace;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        align-items: center;
+    }
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-container img {
+    padding: 10px 0 0 10px;
+    display: none;
+}
+
+.project-container:hover .title-container img {
+    display: block;
+}
+
+.project-container:hover .each-project {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.skill ul {
+    display: flex;
+    padding-left: 40px;
+}
+
+.skill li {
+    font-family: 'Karla', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    list-style-type: none;
+}
+
+.right-side {
+    width: 40%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-screen-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -100px;
+}
+
+.main-image {
+    z-index: 1;
+    width: 18vw;
+    height: auto;
+    border-radius: 30px;
+}
+
+.each-project {
+    opacity: 0;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    transform: translateY(10px); /* Neu hinzugefügt */
-    }
-    @media (max-width: 900px) {
-        .right-side{
-            display: none;
-        }
-        section .left-side .projects .project-container{
-            width: 90%;
-        }
+    transform: translateY(10px);
+}
 
+/* Responsive Styles */
+@media (max-width: 1120px) {
+    .right-side {
+        display: none;
     }
-    @media (max-width: 600px) {
-        section .left-side  .projects .project-container .left{
-            flex-direction: column; 
-            justify-content: space-between;
-            margin-left: 0px;
+    .project-container {
+        width: 90%;
     }
-    section  .left-side  .project-container ul{
+   
+}
+@media (max-width: 900px) {
+    section {
         
-        padding-left: 0px;
+        padding-left: 56px;
+        // padding-right: 26px;
+    }
+}
+@media (max-width: 600px) {
+    .left {
+        flex-direction: column;
+    }
+    .skill ul {
+        padding-left: 0;
         margin-top: 30px;
-       
     }
 }

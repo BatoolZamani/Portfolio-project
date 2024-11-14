@@ -36,9 +36,9 @@ export class ContactMeComponent {
   };
 
   onSubmit() {
-    console.log("Submit button clicked"); // Debug-Nachricht
+    
     this.isFormSubmitted = true;
-    console.log('Form submitted:', this.userForm.valid); // Debug-Ausgabe
+    
 
     if (this.userForm.valid) {
         const payload = {
@@ -51,7 +51,7 @@ export class ContactMeComponent {
         this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
             .subscribe({
                 next: (response) => {
-                    console.log('Response:', response);
+                   
                     this.userForm.reset();
                     this.isFormSubmitted = false;
                 },
@@ -60,9 +60,9 @@ export class ContactMeComponent {
                 },
                 complete: () => console.info('Send post complete'),
             });
-            console.log("Form is valid, sending data...");
+            
     } else {
-        console.log('Form is invalid');
+        
     }
 }
 }
