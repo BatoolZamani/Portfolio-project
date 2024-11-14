@@ -31,10 +31,10 @@ body {
 .main-content {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to top right, #1c1c1c 0%, #08463b 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%; /* Stellt sicher, dass der Hintergrund die gesamte Breite und Höhe abdeckt */
-  background-position: center;
+  // background-image: linear-gradient(to top right, #1c1c1c 0%, #08463b 100%);
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%; /* Stellt sicher, dass der Hintergrund die gesamte Breite und Höhe abdeckt */
+  // background-position: center;
   // background-size: cover;
   color: #fff;
   width: 100%;
