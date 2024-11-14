@@ -44,9 +44,10 @@
     "SAY_HELLO":"Say Hello ;)",
     "PLACEHOLDER_NAME":"Your Name ...",
     "PLACEHOLDER_EMAIL":"Your E-Mail ...",
-    "PLACEHOLDER_MESSAGE":"Your Message ..."
-
-
+    "PLACEHOLDER_MESSAGE":"Your Message ...",
+    "SUCCESS_TITLE": "Thank You!",
+    "SUCCESS_MESSAGE": "Your message has been sent successfully. I’ll review it and get back to you at my earliest convenience. I appreciate your time!"
+ 
 
 
     

@@ -46,5 +46,12 @@
     "SAY_HELLO":"Sag Hallo ;)",
     "PLACEHOLDER_NAME":"Your Name ...",
     "PLACEHOLDER_EMAIL":"Your E-Mail ...",
-    "PLACEHOLDER_MESSAGE":"Your Message ..."
-  }
+    "PLACEHOLDER_MESSAGE":"Your Message ...",
+    "SUCCESS_TITLE":  "Vielen Dank ",
+    "SUCCESS_MESSAGE": "Ihre Nachricht wurde erfolgreich gesendet. Ich werde sie überprüfen und mich so bald wie möglich mit Ihnen in Verbindung setzen. Ich danke Ihnen für Ihre Zeit!"
+
+
+     }
+  
+   
+  

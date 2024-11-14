@@ -14,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ContactMeComponent {
   userForm: FormGroup;
   isFormSubmitted: boolean = false;
+  showPopup: boolean = false; // Pop-up Steuerungsvariable
 
   constructor(private http: HttpClient) {
     this.userForm = new FormGroup({
@@ -29,40 +30,39 @@ export class ContactMeComponent {
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
+        'Content-Type': 'application/json'
+      }
+    }
   };
 
+  
+
   onSubmit() {
-    
     this.isFormSubmitted = true;
-    
 
     if (this.userForm.valid) {
-        const payload = {
-            name: this.userForm.value.firstname,
-            email: this.userForm.value.email,
-            message: this.userForm.value.message,
-            privacyAccepted: this.userForm.value.isAgree,
-        };
+      const payload = {
+        name: this.userForm.value.firstname,
+        email: this.userForm.value.email,
+        message: this.userForm.value.message,
+        privacyAccepted: this.userForm.value.isAgree
+      };
 
-        this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
-            .subscribe({
-                next: (response) => {
-                   
-                    this.userForm.reset();
-                    this.isFormSubmitted = false;
-                },
-                error: (error) => {
-                    console.error('Error:', error);
-                },
-                complete: () => console.info('Send post complete'),
-            });
-            
-    } else {
-        
+      this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
+        .subscribe({
+          next: (response) => {
+            this.userForm.reset();
+            this.isFormSubmitted = false;
+            this.showPopup = true; // Pop-up anzeigen
+          },
+          error: (error) => {
+            console.error('Error:', error);
+          }
+        });
     }
-}
+  }
+
+  closePopup() {
+    this.showPopup = false;
+  }
 }

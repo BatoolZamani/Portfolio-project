@@ -54,4 +54,13 @@
         </form>
       </div>
     </div>
-  </section>
+      <!-- Pop-up Modal -->
+  <div class="popup" *ngIf="showPopup">
+    <div class="popup-content">
+      <span class="close" (click)="closePopup()">&times;</span>
+      <h2>{{ 'SUCCESS_TITLE' | translate }}</h2>
+      <p>{{ 'SUCCESS_MESSAGE' | translate }}</p>
+    </div>
+  </div>
+</section>
+  
