@@ -193,39 +193,62 @@ align-items: center;
 .hamburger:hover .hamburger-line {
     background-color: #3DCFB6; 
 }
-  @media (max-width: 900px) {
-    section { /* Stelle sicher, dass du die richtige Klasse anvisierst */
-        padding-left: 34px; /* Neues Padding für links */
-        padding-right: 34px; /* Neues Padding für rechts */
-        padding-top: 18px; /* Beibehaltung des Top-Paddings */
+@media (max-width: 900px) {
+    section {
+      padding-left: 34px;
+      padding-right: 34px;
+      padding-top: 18px;
     }
-    .menu-content{
-        display: none;
+  
+    .menu-content {
+      display: none;
     }
-    .responsive-menu{
-    display: flex;
+  
+    .responsive-menu {
+      display: flex;
     }
+  
     .logo-section img {
-        width: 80px;
-        height: 100px;
+      width: 80px;
+      height: 100px;
     }
-    
+  
     .menu-content.mobile_menu {
-            position: absolute;
-            display: flex;
-            gap: 20px;
-            border-radius: 30px;
-            
-            padding: 40px 77px;
-            top: 120px;
-            right: 0;
-            z-index: 5;
-            background-image: linear-gradient(to top right, #1c1c1c 0 40%, 80%, #08463b);
-            flex-direction: column-reverse;
-            transition: transform 125ms ease-in-out;
-            align-items: flex-start;
-        }
-        .menu-content a {
-            padding-left: 0px;
-        }
-}
+      position: absolute;
+      display: flex;
+      border-radius: 30px;
+      padding: 40px 77px;
+      top: 120px;
+      right: 0;
+      z-index: 5;
+      background-image: linear-gradient(to top right, #1c1c1c 0 40%, 80%, #08463b);
+      flex-direction: column; /* Reihenfolge beibehalten */
+      gap: 20px;
+      transition: transform 125ms ease-in-out;
+      align-items: flex-start;
+    }
+  
+    .menu-content a {
+      padding-left: 0px;
+      color: white;
+      font-size: 20px;
+    }
+  
+    .menu-content a[href="#aboutscroll"] {
+      order: 1; /* ABOUT_ME zuerst */
+    }
+  
+    .menu-content a[href="#skillsscroll"] {
+      order: 2; /* SKILLS als zweites */
+    }
+  
+    .menu-content a[href="#Projectsscroll"] {
+      order: 3; /* PROJECTS als drittes */
+    }
+  
+    .menu-content .toggle-switch {
+      order: 4; /* Toggle-Switch zuletzt */
+      align-self: flex-start; /* Links ausrichten */
+      margin-top: 20px;
+    }
+  }

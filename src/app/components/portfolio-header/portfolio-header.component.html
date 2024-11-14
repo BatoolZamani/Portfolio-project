@@ -1,25 +1,25 @@
 <section>
-    <div class="menu-content" [class.mobile_menu]="menuValue">
-      <label class="toggle-switch">
-        <input type="checkbox" id="language" (change)="switchLanguage(language.checked ? 'de' : 'en')" #language>
-        <span class="slider round"></span>
-        <div>
-          <span class="text en">EN</span>
-          <span class="text de">DE</span>
-        </div>
-      </label>
-      <a href="#aboutscroll" (click)="closeMenu()">{{ 'ABOUT_ME' | translate }}</a>
-      <a href="#skillsscroll" (click)="closeMenu()">{{ 'SKILLS' | translate }}</a>
-      <a href="#Projectsscroll" (click)="closeMenu()">{{ 'PROJECTS' | translate }}</a>
-    </div>
-    <div class="logo-section">
-      <img src="assets/img/mylogo.png" alt="">
-    </div>
-    <div class="responsive-menu" >
-      <div class="hamburger" (click)="openMenu()">
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
+  <div class="menu-content" [class.mobile_menu]="menuValue">
+    <label class="toggle-switch">
+      <input type="checkbox" id="language" (change)="switchLanguage(language.checked ? 'de' : 'en')" #language>
+      <span class="slider round"></span>
+      <div>
+        <span class="text en">EN</span>
+        <span class="text de">DE</span>
       </div>
+    </label>
+    <a href="#aboutscroll" (click)="closeMenu()">{{ 'ABOUT_ME' | translate }}</a>
+    <a href="#skillsscroll" (click)="closeMenu()">{{ 'SKILLS' | translate }}</a>
+    <a href="#Projectsscroll" (click)="closeMenu()">{{ 'PROJECTS' | translate }}</a>
+  </div>
+  <div class="logo-section">
+    <img src="assets/img/mylogo.png" alt="">
+  </div>
+  <div class="responsive-menu">
+    <div class="hamburger" (click)="openMenu()">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
     </div>
-  </section>
+  </div>
+</section>
