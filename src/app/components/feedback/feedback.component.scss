@@ -25,7 +25,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 50px;
-  height: 60vh;
+  height: 50vh;
   margin-top: 48px;
   overflow: hidden;
   position: relative;
@@ -213,24 +213,51 @@ html, body {
 
 
 @media (max-width: 1170px) {
-  .feedback-slider {
-    height: 60vh;
-  }
+  
   .feedback-slider .slider-container .slider .slide .feedback-text {
     font-size: 16px;
   }
 }
-
-@media (max-width: 850px) {
-  .feedback-slider {
-    height: 70vh;
-  }
-  
+@media (max-width: 900px) {
+  .slide {
+    
+    width: 70%;
 }
-@media (max-width: 550px) {
-  .feedback-slider {
-    height: 80vh;
+}
+@media (max-width: 700px) {
+  .slide {
+    
+    width: 80%;
+}
+}
+@media (max-width: 730px) {
+  .header-title  {
+    font-size: 20px;
   }
+  .feedback-slider {
+  
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.feedback-slider{
+ 
+  height: 70vh;
+}
+}
+
+@media (max-width: 600px) {
+  .slide {
+    
+    width: 95%;
+}
+}
+@media (max-width: 560px) {
+ 
+  .slide {
+    
+    width: 90%;
+}
   
 }
 @media (max-width: 410px) {
@@ -241,7 +268,15 @@ html, body {
   
    
   }
-  .feedback-slider {
-    height: 85vh;
+  .feedback-slider{
+ 
+    height: 80vh;
   }
+  
+  .header-title  {
+    font-size: 18px;
+    text-align: center;
+    padding-left: 10px;
+}
+ 
 }

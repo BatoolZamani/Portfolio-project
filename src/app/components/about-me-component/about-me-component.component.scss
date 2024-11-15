@@ -1,26 +1,20 @@
-
 section {
     display: flex;
     flex-direction: row;
     width: 100%;
-    // height: 100vh;
     margin-bottom: 100px;
-    padding-left: 96px;
-    padding-right: 96px;
-    
-}
-
-.left-side {
+    padding: 0 96px;
+  }
+  
+  .left-side {
     position: relative;
-    width: 50%;    
+    width: 50%;
     display: flex;
     align-items: center;
-    // justify-content: center;
     padding-left: 46px;
-    
-    
-}
-.my-image-container {
+  }
+  
+  .my-image-container {
     position: relative;
     background-color: transparent;
     border-radius: 30px;
@@ -29,10 +23,9 @@ section {
     justify-content: center;
     align-items: center;
     top: 20px;
-    
-}
-
-.left-side .back-line {
+  }
+  
+  .left-side .back-line {
     position: absolute;
     top: 0;
     left: 0;
@@ -40,100 +33,95 @@ section {
     height: 100%;
     border-radius: 30px;
     opacity: 0;
-    background-color: transparent;
-    background: repeating-linear-gradient(56deg, rgba(61, 207, 182,0.2) 0px, transparent 20px, transparent 30px);
+    background: repeating-linear-gradient(56deg, rgba(61, 207, 182, 0.2) 0px, transparent 20px, transparent 30px);
     z-index: 1;
-}
-
-
-.left-side img:not(.back-line) {
+  }
+  
+  .left-side img:not(.back-line) {
     position: relative;
     z-index: 3;
     transform: translate(32px, -32px);
     width: 100%;
     border-radius: 30px;
-}
-
-.my-image-container:hover .back-line {
+  }
+  
+  /* Hover Effekte */
+  .my-image-container:hover .back-line {
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
-}
-
-.my-image-container .back-line {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.left-side img:hover {
+  }
+  
+  .left-side img:hover {
     opacity: 1;
-}
-.right-seide {
+  }
+  
+  /* Rechte Seite */
+  .right-seide {
     width: 50%;
     padding-top: 242px;
-    .about-me-details-container{
-        display: flex;
-        flex-direction: column;
-        
-       .about-me-details{
-        display: flex;
-        flex-direction: row;
-        text-align:start;
-        padding-top: 16px;
-        padding-bottom: 20px;
-        
-        span {
-            display: inline-block;
-            transition: transform 0.3s ease;
-            position: relative;
-            transform: translateY(0);
-            padding-left: 24px;
-            text-align: justify;
-        }
-        &:hover span {
-            transform: translateY(-3px);
-            cursor: pointer;
-        }
-       }
-       
-    }
-}
-@media (max-width:1200px) {
+  }
+  
+  .about-me-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-me-details {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+  
+  .about-me-details span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    position: relative;
+    transform: translateY(0);
+    padding-left: 24px;
+    text-align: justify;
+  }
+  
+  .about-me-details:hover span {
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
+  
+  /* Medienabfragen */
+  @media (max-width: 1200px) {
     .my-image-container {
-        
-        width: 80%;
-        
+      width: 80%;
     }
-}
-@media (max-width: 900px) {
+  }
+  
+  @media (max-width: 900px) {
     section {
-        flex-direction: column;
-        padding-left: 26px;
-        padding-right: 26px;
+      flex-direction: column;
+      padding: 0 26px;
     }
-    section .description  {
-        
-        padding-left: 0px; 
-        padding-right: 0px; 
-        
-    }
+  
     .left-side {
-        width: 100%;
-        padding: 0 ;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
+  
     .my-image-container {
-        width: 80%;
+      width: 80%;
     }
+  
     .left-side img:not(.back-line) {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      transform: translate(22px, -32px);
     }
+  
     .right-seide {
-        width: 100%;
-        padding-top: 42px;
+      width: 100%;
+      padding-top: 42px;
     }
-}
-
+  }

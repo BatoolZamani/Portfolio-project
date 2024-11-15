@@ -86,7 +86,15 @@
 .my-name-responsive{
     display: none;
 }
-
+@media (max-width: 900px) {
+    .content[_ngcontent-ng-c566144898] {
+        
+        padding-left: 36px;
+        padding-right: 36px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
 @media (max-width: 800px) {
     .mitte{
        display: none;
@@ -107,4 +115,12 @@
         margin-top: 30px;
     }
    
+}
+@media (max-width: 350px) {
+    .content[_ngcontent-ng-c566144898] {
+        
+        padding-left: 26px;
+        padding-right: 26px;
+      
+    }
 }

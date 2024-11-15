@@ -145,7 +145,8 @@ body {
   font-size: 18px;
   transform: rotate(270deg);
   margin-bottom: 90px;
-   
+  width: 10px;
+  
 }
 
 .socila-Media {
@@ -217,7 +218,8 @@ body {
 
 @media (max-width: 760px) {
   .middle h3 {
-    font-size: 30px;
+    font-size: 20px;
+    text-align: center;
   }
   .middle h1 {
     font-size: 90px;
@@ -226,7 +228,7 @@ body {
 
 @media (max-width: 470px) {
   .middle h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
   .button-position button:nth-child(2) {
     display: none;
@@ -236,6 +238,7 @@ body {
 @media (max-width: 430px) {
   .middle h3 {
     font-size: 20px;
+    text-align: center;
   }
   .middle h1 {
     font-size: 70px;
@@ -244,7 +247,7 @@ body {
 
 @media (max-width: 380px) {
   .middle h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .middle h1 {
     font-size: 60px;

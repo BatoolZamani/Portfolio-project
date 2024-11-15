@@ -15,13 +15,13 @@ html {
     
 }
 body {
-    max-width: 1920px; /* Maximale Breite, damit kein horizontales Scrollen entsteht */
+    max-width: 1920px;
     width: 100%;
     height: 100%;
     margin: 0 auto; /* Zentriert den Inhalt auf dem Bildschirm */
     background-image: linear-gradient(to top right, #1c1c1c 0 40%, 80%, #08463b);
     font-family: 'Fira Code', monospace;
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    overflow-x: hidden; 
   }
   button:disabled {
     border-color: #ffffff80;

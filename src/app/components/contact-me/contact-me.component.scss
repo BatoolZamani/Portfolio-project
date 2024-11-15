@@ -310,10 +310,24 @@ section .right input[type=submit]:hover {
       opacity: 1;
     }
   }
+
+@media (max-width: 1440px) {
+    .text-danger-privacy-policy{
+        
+        padding-top: 120px;
+    }
+}
+@media (max-width: 1054px) {
+    section  .left .title-work-together  {
+        font-size: 54px;
+}
+}
 @media (max-width: 900px) {
     section{
         flex-direction: column;
-        margin-left: 40px;
+        margin-left: 0px;
+        padding-left: 36px;
+        padding-right: 36px;
     }
     section .left{
         width: 100%;
@@ -321,9 +335,37 @@ section .right input[type=submit]:hover {
     section .right {
         width: 100%;
     }
-}
-@media (max-width: 1440px) {
-    .text-danger-privacy-policy{
+    section .right  .container form label  {
         
-        padding-top: 120px;
-    }}
+        padding-left: 0px;
+        
+    }
+ 
+}
+@media (max-width: 550px) {
+    section  .left .title-work-together  {
+        font-size: 34px;
+    }
+    
+}
+@media (max-width: 430px) {
+    section  .right .container  form  label  {
+        
+        font-size: 18px;
+        
+    }
+    section {
+         
+        padding-left: 20px;
+    }
+    
+}
+@media (max-width: 455px) {
+    .popup-content {
+        
+        padding: 10px;
+        
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    }
