@@ -1,186 +1,180 @@
-
 section {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding-left: 136px;
     padding-right: 96px;
-}
-
-/* Left section styling */
-section .left {
+  }
+  
+  /* Left section styling */
+  section .left {
     display: flex;
     flex-direction: column;
-    font-family: 'Karla', monospace;
+    font-family: "Karla", monospace;
     width: 50%;
-    color: #3DCFB6;
+    color: #3dcfb6;
     padding-right: 2%;
-}
-
-section .left .title {
+  }
+  
+  section .left .title {
     font-size: 24px;
     font-weight: 500;
-}
-
-section .left .title-work-together {
+  }
+  
+  section .left .title-work-together {
     font-size: 64px;
-    font-family: 'Fira Code', monospace;
-}
-
-section .left .sub-title {
+    font-family: "Fira Code", monospace;
+  }
+  
+  section .left .sub-title {
     font-size: 24px;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 700;
-}
-
-section .left .description {
+  }
+  
+  section .left .description {
     color: white;
     font-size: 16px;
     line-height: 28px;
-}
-
-section .left .description a {
+  }
+  
+  section .left .description a {
     text-decoration: none;
-    color: #3DCFB6;
-}
-
-/* Right section styling */
-section .right {
+    color: #3dcfb6;
+  }
+  
+  /* Right section styling */
+  section .right {
     display: flex;
     flex-direction: column;
     color: white;
     width: 50%;
-}
-
-/* Form container and line separator */
-section .right .container form {
+  }
+  
+  /* Form container and line separator */
+  section .right .container form {
     display: flex;
     flex-direction: column;
-}
-
-section .right .container form .line {
+  }
+  
+  section .right .container form .line {
     width: 100%;
     margin-top: 32px;
     height: 1px;
     background-color: #3dcfb680;
-}
-
-section .right .container form .last-line {
+  }
+  
+  section .right .container form .last-line {
     margin-bottom: 32px;
-}
-
-/* Label and input styling */
-section .right .container form label{
-    font-family: 'Fira Code', monospace;
+  }
+  
+  /* Label and input styling */
+  section .right .container form label {
+    font-family: "Fira Code", monospace;
     font-weight: 500;
     font-size: 24px;
     line-height: 18px;
     color: #3dcfb6;
     padding-left: 32px;
     padding-top: 32px;
-
-}
-section .right .container form label a{
-    
+  }
+  section .right .container form label a {
     color: #3dcfb6;
     text-decoration: none;
-
-}
-section .right .container form label:last-child {
+  }
+  section .right .container form label:last-child {
     position: relative;
-    font-family: 'Karla', monospace;
+    font-family: "Karla", monospace;
     font-size: 18px;
     // margin-left: 16px;
     font-weight: 400;
     line-height: 18px;
     color: #fff;
-    padding-top: 0px;    
+    padding-top: 0px;
     padding-right: 10px;
-    width:50%;
+    width: 50%;
     line-height: 28px;
-
-}
-
-section .right input[type=text],
-section .right input[type=email],
-section .right select,
-section .right textarea {
+  }
+  
+  section .right input[type="text"],
+  section .right input[type="email"],
+  section .right select,
+  section .right textarea {
     background-color: transparent;
     border: none;
     margin-top: 16px;
     margin-left: 32px;
     margin-right: 32px;
-    font-family: 'Karla', monospace;
+    font-family: "Karla", monospace;
     font-weight: 400;
     font-size: 18px;
     line-height: 21.6px;
     color: #fffc;
-}
-
-section .right input[type=text]:focus,
-section .right input[type=email]:focus,
-section .right select:focus,
-section .right textarea:focus {
+  }
+  
+  section .right input[type="text"]:focus,
+  section .right input[type="email"]:focus,
+  section .right select:focus,
+  section .right textarea:focus {
     border: none;
     outline: none;
-}
-
-/* Textarea resize behavior */
-section .right textarea {
+  }
+  
+  /* Textarea resize behavior */
+  section .right textarea {
     overflow: auto;
     resize: vertical;
     min-height: 100px;
-}
-
-/* Button styling */
-section .right input[type=submit],
-section .right .container form .center button {
+  }
+  
+  /* Button styling */
+  section .right input[type="submit"],
+  section .right .container form .center button {
     padding: 13px 24px;
     background-color: transparent;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 100px;
     color: #fff;
-    font-family: 'Karla', monospace;
+    font-family: "Karla", monospace;
     font-size: 18px;
     line-height: 21.6px;
     font-weight: 400;
     transition: all 0.1s ease-in-out;
     margin-top: 32px;
     cursor: pointer;
-}
-section .right input[type=submit],
-section .right .container form .center button:hover{
-    border-color: #3DCFB6;
-    color: #3DCFB6;
-}
-
-section .right .container form .center{
-   
+  }
+  section .right input[type="submit"],
+  section .right .container form .center button:hover {
+    border-color: #3dcfb6;
+    color: #3dcfb6;
+  }
+  
+  section .right .container form .center {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-}
-
-/* Checkbox styling */
-[type="checkbox"] {
+  }
+  
+  /* Checkbox styling */
+  [type="checkbox"] {
     position: relative;
     left: 15px;
     top: -4px;
     z-index: 0;
     -webkit-appearance: none; /* Chrome, Safari */
-    -moz-appearance: none;    /* Firefox */
-    appearance: none;         /* Standard */
-}
-
-[type="checkbox"] + label {
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* Standard */
+  }
+  
+  [type="checkbox"] + label {
     position: absolute;
-}
-
-[type="checkbox"] + label::before {
+  }
+  
+  [type="checkbox"] + label::before {
     width: 20px;
     height: 20px;
     border-radius: 5px;
-    border: 2px solid #3DCFB6;
+    border: 2px solid #3dcfb6;
     background-color: #292929;
     display: block;
     content: "";
@@ -190,50 +184,51 @@ section .right .container form .center{
     z-index: 5;
     position: relative;
     margin-top: 3px;
-}
-
-[type="checkbox"]:checked + label::before {
+    cursor: pointer;
+  }
+  
+  [type="checkbox"]:checked + label::before {
     box-shadow: inset 0px 0px 0px 3px #292929;
-    background-color: #3DCFB6;
-}
-
-/* Legal text and privacy policy styling */
-section .right .container form .check-legal {
+    background-color: #3dcfb6;
+  }
+  
+  /* Legal text and privacy policy styling */
+  section .right .container form .check-legal {
     margin-left: 32px;
     display: flex;
     align-items: center;
     flex-direction: row;
-}
-
-section .right .container form .check-legal .legal-text a {
+  }
+  
+  section .right .container form .check-legal .legal-text a {
     text-decoration: none;
-    color: #3DCFB6;
-}
-
-/* Submit button hover behavior */
-section .right input[type=submit]:hover {
-    background-color: #3DCFB6;
+    color: #3dcfb6;
+  }
+  
+  /* Submit button hover behavior */
+  section .right input[type="submit"]:hover {
+    background-color: #3dcfb6;
     border: solid 1px #fff;
     cursor: pointer;
-}
-.text-danger{
+  }
+  .text-danger {
     color: red;
     padding-left: 32px;
     padding-top: 40px;
-}
-.text-danger-message{
+  }
+  .text-danger-message {
     color: red;
     padding-left: 32px;
     padding-top: 10px;
-}
-.text-danger-privacy-policy{
+  }
+  .text-danger-privacy-policy {
     color: red;
     padding-left: 32px;
     padding-top: 90px;
-}
-
-/* Popup Overlay */
-.popup {
+  }
+  
+  /* Popup Overlay */
+  .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -244,7 +239,7 @@ section .right input[type=submit]:hover {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    animation: fadeIn 0.2s ease-in-out; 
+    animation: fadeIn 0.2s ease-in-out;
     backdrop-filter: blur(6px);
   }
   
@@ -259,19 +254,19 @@ section .right input[type=submit]:hover {
     text-align: center;
     position: relative;
     border: 2px solid rgba(61, 207, 182, 0.5019607843);
-    animation: slideIn 0.5s ease-out; 
+    animation: slideIn 0.5s ease-out;
   }
   
   /* Title Style */
   .popup-content h2 {
     margin-bottom: 20px;
-    font-family: 'Fira Code', monospace;
-    color: #3DCFB6;
+    font-family: "Fira Code", monospace;
+    color: #3dcfb6;
   }
   
   /* Paragraph Style */
   .popup-content p {
-    font-family: 'Karla', monospace;
+    font-family: "Karla", monospace;
     color: #ccc;
   }
   
@@ -282,7 +277,7 @@ section .right input[type=submit]:hover {
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-    color: #3DCFB6;
+    color: #3dcfb6;
   }
   
   .close:hover {
@@ -310,62 +305,53 @@ section .right input[type=submit]:hover {
       opacity: 1;
     }
   }
-
-@media (max-width: 1440px) {
-    .text-danger-privacy-policy{
-        
-        padding-top: 120px;
+  
+  @media (max-width: 1440px) {
+    .text-danger-privacy-policy {
+      padding-top: 120px;
     }
-}
-@media (max-width: 1054px) {
-    section  .left .title-work-together  {
-        font-size: 54px;
-}
-}
-@media (max-width: 900px) {
-    section{
-        flex-direction: column;
-        margin-left: 0px;
-        padding-left: 36px;
-        padding-right: 36px;
+  }
+  @media (max-width: 1054px) {
+    section .left .title-work-together {
+      font-size: 54px;
     }
-    section .left{
-        width: 100%;
+  }
+  @media (max-width: 900px) {
+    section {
+      flex-direction: column;
+      margin-left: 0px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    section .left {
+      width: 100%;
     }
     section .right {
-        width: 100%;
+      width: 100%;
     }
-    section .right  .container form label  {
-        
-        padding-left: 0px;
-        
+    section .right .container form label {
+      padding-left: 0px;
     }
- 
-}
-@media (max-width: 550px) {
-    section  .left .title-work-together  {
-        font-size: 34px;
+  }
+  @media (max-width: 550px) {
+    section .left .title-work-together {
+      font-size: 34px;
     }
-    
-}
-@media (max-width: 430px) {
-    section  .right .container  form  label  {
-        
-        font-size: 18px;
-        
+  }
+  @media (max-width: 430px) {
+    section .right .container form label {
+      font-size: 18px;
     }
     section {
-         
-        padding-left: 20px;
+      padding-left: 20px;
     }
-    
-}
-@media (max-width: 455px) {
+  }
+  @media (max-width: 455px) {
     .popup-content {
-        
-        padding: 10px;
-        
-        margin-left: 20px;
-        margin-right: 20px;
+      padding: 10px;
+  
+      margin-left: 20px;
+      margin-right: 20px;
     }
-    }
+  }
+  

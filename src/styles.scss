@@ -78,3 +78,19 @@ body {
         }
     }
 }
+#scrollToTop  {
+    position: fixed;
+    display: none; /* Standardmäßig ausgeblendet */
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}

@@ -12,6 +12,8 @@ import { FeedbackSliderComponent } from './components/feedback/feedback.componen
 import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { interval as observableInterval } from "rxjs";
+import { takeWhile, scan, tap } from "rxjs/operators";
 
 // Für ngx-translate
 import { HttpClientModule } from '@angular/common/http';

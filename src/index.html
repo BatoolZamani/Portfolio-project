@@ -13,6 +13,34 @@
 
 </head>
 <body>
+  <button id="scrollToTop"><img src="/assets/img/up.svg" alt=""></button>
   <app-root></app-root>
 </body>
 </html>
+<script>
+  // Warten, bis der DOM vollständig geladen ist
+  document.addEventListener('DOMContentLoaded', () => {
+    // Den Button mit der ID scrollToTop auswählen
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    // Ein Klick-Event-Listener hinzufügen
+    scrollToTopButton.addEventListener('click', () => {
+      // Scrollt sanft nach oben
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Überprüfen, ob die Seite gescrollt wurde
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        // Button anzeigen, wenn mehr als 200px gescrollt wurde
+        scrollToTopButton.style.display = 'flex';
+      } else {
+        // Button ausblenden
+        scrollToTopButton.style.display = 'none';
+      }
+    });
+  });
+</script>

@@ -27,7 +27,9 @@ a {
     transition: color 0.3s ease;
     cursor: pointer;
 }
-
+.logo-section a:hover::after{
+  background-color: transparent;
+}
 a::after {
     content: '';
     position: absolute;
