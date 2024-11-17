@@ -11,14 +11,24 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class PortfolioHeaderComponent {
  
   menuValue:boolean=false;
-  constructor(private translate: TranslateService) {
-    // Standard-Sprache auf Englisch setzen
-    translate.setDefaultLang('en');
+  constructor(public translate: TranslateService) {
+    // Überprüfen, ob eine Sprache im Local Storage gespeichert ist
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+      // Wenn eine Sprache gespeichert ist, setze sie als aktuelle Sprache
+      this.translate.use(savedLanguage);
+    } else {
+      // Wenn keine Sprache gespeichert ist, setze Englisch als Standard
+      this.translate.setDefaultLang('en');
+    }
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
+ // Methode zum Umschalten der Sprache
+ switchLanguage(language: string) {
+  this.translate.use(language);
+  // Sprache im Local Storage speichern
+  localStorage.setItem('language', language);
+}
   
   
   openMenu(){

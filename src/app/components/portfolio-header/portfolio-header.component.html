@@ -1,7 +1,13 @@
 <section>
   <div class="menu-content" [class.mobile_menu]="menuValue">
     <label class="toggle-switch">
-      <input type="checkbox" id="language" (change)="switchLanguage(language.checked ? 'de' : 'en')" #language>
+      <input 
+      type="checkbox" 
+      id="language" 
+      (change)="switchLanguage(language.checked ? 'de' : 'en')" 
+      [checked]="translate.currentLang === 'de'" 
+      #language
+    >
       <span class="slider round"></span>
       <div>
         <span class="text en">EN</span>
